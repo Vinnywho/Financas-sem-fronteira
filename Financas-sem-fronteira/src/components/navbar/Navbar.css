@@ -1,0 +1,172 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  z-index: 1000;
+  padding: 0 50px;
+  letter-spacing: 1px;
+  top: 10px;
+}
+
+nav a:hover {
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+nav .nav-item {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 5px;
+}
+
+nav .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav .nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.contato-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 5px 8px 5px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 200px;
+  text-align: left;
+
+  position: absolute;
+  right: 130px;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.seta {
+  background-color: #000000;
+  padding: 0px 15px 0px 15px;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.contato-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contato-btn:hover .seta {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+
+.logo {
+  position: absolute;
+  left: 130px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: 90px;
+}
+
+/* .nav-actions {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+} */
+
+/* .nav-burger-menu {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 300px; 
+  background-color: #fbfbf2;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  border-radius: 0 0 0 20px;
+  box-shadow: -10px 10px 20px rgba(0,0,0,0.1);
+  z-index: 1000;
+} */
+
+/* .nav-burger-menu.active {
+  max-height: 500px;
+  opacity: 1;
+  padding: 30px;
+  border-top: none;
+} */
+
+/* #nav-burger-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+
+/* #nav-burger-contacts a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.3s;
+} */
+
+/* #nav-burger-contacts a:hover {
+  color: #aa1719;
+  padding-left: 10px;
+} */
