@@ -1,7 +1,7 @@
 .home-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,15 +30,7 @@
   padding: 0 50px;
 }
 
-#janina {
-  height: auto;
-  width: 600px;
-  transition: transform 0.3s ease-in-out;
-}
 
-#janina:hover {
-  transform: scale(1.05);
-}
 
 #infos {
   display: flex;
@@ -46,6 +38,7 @@
   align-items: left;
   text-align: left;
   margin-right: 100px;
+  margin-top: 50px;
 }
 
 #infos h1 {
@@ -57,17 +50,21 @@
   line-height: 1.0;
 }
 
+
 .destaque {
   color: #D7C36B;
+  font-weight: 900;
 }
 
 #infos p {
   color: #ffffff;
   font-size: 20px;
+  font-weight: 100;
   margin-bottom: 30px;
   max-width: 600px;
   font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
+  letter-spacing: .3px;
 }
 
 .botoes-home{
@@ -112,6 +109,15 @@
   color: #ffffff;
 }
 
+#janina {
+  height: auto;
+  width: 550px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#janina:hover {
+  transform: scale(1.05);
+}
 
 .janina-wrapper {
   position: relative;
@@ -120,15 +126,17 @@
 
 .card{
   position: absolute;
-  background: #ffffffd2;
-  backdrop-filter: blur(12px);
+  background: #ffffff49;
+  backdrop-filter: blur(6px);
+  /* filter:blur(12px); */
   border-radius: 1rem;
-  padding: 30px;
+  padding: 25px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   width: 250px;
   animation: flutuar 3s ease-in-out infinite;
   z-index: 10;
+  text-align: center;
 }
 
 .flex-container {
@@ -140,11 +148,11 @@
   font-size: 18px; 
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
-  color: #a37325; 
+  color: #ffffff; 
   margin: 0; 
 }
 
-.card-pos-1 { top: 150px; left: -50px; animation-delay: 0s; }
+.card-pos-1 { top: 150px; left: -65px; animation-delay: 0s; }
 .card-pos-2 { top: 400px; right: -100px; animation-delay: 1s; }
 .card-pos-3 { bottom: 20px; left: 0px; animation-delay: 2s; }
 
@@ -159,6 +167,7 @@
   border-radius: 50%;
   filter: blur(80px);
   opacity: 1;
+  animation: flutuar 3s ease-in-out infinite;
 }
 
 .circulo-1 {

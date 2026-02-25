@@ -16,7 +16,7 @@ function Home() {
             CONSTRUA SEU <span className="destaque">LEGADO</span> FINANCEIRO
           </h1>
           <p>
-            <b>FINANÇAS SEM FRONTEIRA</b> é uma empresa voltada para educação
+            <span className="destaque">FINANÇAS SEM FRONTEIRA</span> é uma empresa voltada para educação
             financeira comportamental e tem como objetivo enriquecer a relação
             das pessoas com o dinheiro. Nosso propósito é disseminar a educação
             financeira comportamental oferecendo um tratamento multidisciplinar,
@@ -33,7 +33,7 @@ function Home() {
           <div className="card card-pos-1">
             <div className="flex-container">
               <div className="texto-box">
-                <p className="frase">Transmitindo o despertar da trajetória equilibrada que realiza sonhos</p>
+                <p className="frase">Respeitando cada indivíduo como único.</p>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ function Home() {
           <div className="card card-pos-2">
             <div className="flex-container">
               <div className="texto-box">
-                <p className="frase">Mudando conceitos e valores através do exemplo</p>
+                <p className="frase">Mudando conceitos e valores através do exemplo.</p>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ function Home() {
           <div className="card card-pos-3">
             <div className="flex-container">
               <div className="texto-box">
-                <p className="frase">Despertar a reflexão com relação a utilização do dinheiro</p>
+                <p className="frase">Despertar a reflexão com relação a utilização do dinheiro.</p>
               </div>
             </div>
           </div>
