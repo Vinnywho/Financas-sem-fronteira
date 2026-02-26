@@ -1,4 +1,4 @@
-.home-container {
+.home {
   position: relative;
   width: 100%;
   height: 900px;
@@ -19,7 +19,7 @@
   pointer-events: none;
 }
 
-#home {
+#home-container {
   position: relative;
   z-index: 2;
   display: flex;
@@ -74,8 +74,8 @@
 }
 
 .consultoria-btn {
-  background-color: #D7C36B;
-  color: #000000;
+  background-color: #AD894F;
+  color: #fff;
   border: none;
   border-radius: 3rem;
   padding: 15px 30px;
@@ -87,7 +87,7 @@
 }
 
 .consultoria-btn:hover {
-  background-color: #AD894F;
+  background-color: #ffffff;
   color: #000000;
 }
 

@@ -4,13 +4,13 @@ import janina from "../../assets/images/Janina.png";
 
 function Home() {
   return (
-    <div className="home-container">
+    <section className="home" id="home">
       <div className="background-container">
         <div className="circulo circulo-1"></div>
         <div className="circulo circulo-2"></div>
       </div>
 
-      <section id="home">
+      <section id="home-container">
         <div id="infos">
           <h1>
             CONSTRUA SEU <span className="destaque">LEGADO</span> FINANCEIRO
@@ -55,7 +55,7 @@ function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 }
 

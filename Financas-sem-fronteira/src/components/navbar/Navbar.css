@@ -8,9 +8,13 @@ nav {
   background-color: transparent;
   top: 0;
   z-index: 1000;
-  padding: 0 50px;
+  padding: 60px;
+  padding-bottom: 80px;
   letter-spacing: 1px;
-  top: 10px;
+
+  background-color: rgba(0, 34, 29, 0.199); 
+  backdrop-filter: blur(5px);
+  mask-image: linear-gradient(to bottom, black 58%, transparent 100%);
 }
 
 nav a:hover {
