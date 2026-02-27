@@ -1,4 +1,4 @@
-#blog {
+/* #blog {
   padding: 50px 20px;
   height: 900px;
   display: flex;
@@ -12,6 +12,7 @@
 #blog h1 {
   color: #ffffff;
   font-size: 80px;
+  font-weight: 900;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 80px;
   margin-top: 0px;
@@ -117,4 +118,4 @@
 .btn-blog-todos:hover {
   background-color: #ffffff;
   color: #000000;
-}
+} */
