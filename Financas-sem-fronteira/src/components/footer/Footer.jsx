@@ -1,11 +1,11 @@
 import React from "react";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 function Footer() {
   return (
     <div>
-      <footer>
-        <a href="#home" className="scroll-top">
+      <footer className={styles.footer}>
+        <a href="#home" className={styles.scrollTop}>
           <svg
             width="58"
             height="62"
@@ -19,7 +19,7 @@ function Footer() {
             />
           </svg>
         </a>
-        <div id="contatos">
+        <div className={styles.contatos}>
           <a
             href="https://instagram.com/vinny.who"
             target="_blank"

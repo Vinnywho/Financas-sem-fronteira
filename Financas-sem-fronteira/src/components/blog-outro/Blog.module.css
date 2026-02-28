@@ -77,8 +77,8 @@
 }
 
 .projeto-principal-texto p{
-    font-size: 20px;
-    color: #666;
+    font-size: 18px;
+    color: #434343;
     text-align: left;
 }
 
@@ -99,7 +99,7 @@
     color: #fff;
 }
 
-#grid-blog {
+.grid-blog {
   width: 100%;
   margin: 0 auto;
   display: grid;

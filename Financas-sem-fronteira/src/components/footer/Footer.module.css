@@ -1,4 +1,5 @@
-footer {
+/* Footer.module.css */
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +10,7 @@ footer {
   font-family: "Montserrat", sans-serif;
 }
 
-.scroll-top {
+.scrollTop {
   color: #fff;
   font-family: "Montserrat", sans-serif !important;
   text-decoration: none;
@@ -19,19 +20,19 @@ footer {
   line-height: 1;
 }
 
-.scroll-top:hover {
+.scrollTop:hover {
   color: #3F5B5B;
   transform: translateY(-5px);
 }
 
-#contatos {
+.contatos {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-bottom: 20px;
 }
 
-#contatos a {
+.contatos a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -39,11 +40,11 @@ footer {
   text-transform: uppercase;
 }
 
-#contatos a:hover {
+.contatos a:hover {
   color: #3F5B5B;
 }
 
-footer p {
+.footer p {
   font-size: 14px;
   opacity: 0.7;
   line-height: 18px;
@@ -51,7 +52,7 @@ footer p {
   text-decoration: none;
 }
 
-a:link{
+.footer a {
     text-decoration: none;
     color: inherit;
 }

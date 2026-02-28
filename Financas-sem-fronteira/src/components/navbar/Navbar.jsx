@@ -1,26 +1,23 @@
 import { useState } from 'react';
-import './Navbar.css';
+import styles from './Navbar.module.css';
 import logo from '../../assets/icons/Logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav>
-        <img src={logo} alt="Logo" className='logo'/>
-      <ul className={isOpen ? 'active' : ''}>
-        <li><a href="#home" className="nav-item" onClick={() => setIsOpen(false)}>HOME</a></li>
-        <li><a href="#solucoes" className="nav-item" onClick={() => setIsOpen(false)}>SOLUÇÕES</a></li>
-        <li><a href="#blog" className="nav-item" onClick={() => setIsOpen(false)}>BLOG</a></li>
-        <li><a href="#galeria" className="nav-item" onClick={() => setIsOpen(false)}>GALERIA</a></li>
-        <li><a href="#depoimentos" className="nav-item" onClick={() => setIsOpen(false)}>DEPOIMENTOS</a></li>
+    <nav className={styles.nav}>
+      <img src={logo} alt="Logo" className={styles.logo}/>
+      <ul className={`${styles.navUl} ${isOpen ? styles.active : ''}`}>
+        <li><a href="#home" className={styles.navItem} onClick={() => setIsOpen(false)}>HOME</a></li>
+        <li><a href="#solucoes" className={styles.navItem} onClick={() => setIsOpen(false)}>SOLUÇÕES</a></li>
+        <li><a href="#blog" className={styles.navItem} onClick={() => setIsOpen(false)}>BLOG</a></li>
+        <li><a href="#galeria" className={styles.navItem} onClick={() => setIsOpen(false)}>GALERIA</a></li>
+        <li><a href="#depoimentos" className={styles.navItem} onClick={() => setIsOpen(false)}>DEPOIMENTOS</a></li>
       </ul>
 
-      <div className="nav-actions">
-        <button className="contato-btn">ENTRE EM CONTATO <span className='seta'>→</span></button>
-        {/* <button className={`burger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-          <span></span><span></span><span></span>
-        </button> */}
+      <div className={styles.navActions}>
+        <button className={styles.contatoBtn}>ENTRE EM CONTATO <span className={styles.seta}>→</span></button>
       </div>
     </nav>
   );
