@@ -1,0 +1,178 @@
+.proposito {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+.containerProposito {
+    border-radius: 3rem;
+    padding: 2rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
+    width: 1400px;
+    height: 500px;
+}
+
+.graficoContainer {
+    position: relative;
+    width: 600px;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 30px;
+    border: #6666663f solid 1px;
+    transition: 0.3s;
+}
+
+.graficoBarContainer {
+    display: flex;
+    align-items: flex-end;
+    height: 256px;
+    gap: 0.5rem;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    background-color: #f7f6f6;
+}
+
+.graficoBar {
+    background: #1d4d4e;
+    border-radius: 1.8rem;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.graficoBar:hover {
+    background: #153a3b;
+    transform: translateY(-5px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.graficoHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #AD894F;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.graficoFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #3333338e;
+  color: #fff;
+  padding: 5px;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  width: 60px;
+  text-align: center;
+}
+
+.graficoBar:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.descricaoProposito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 344px;
+    max-width: 650px;
+    gap: 1rem;
+}
+
+.descricaoProposito p {
+    font-size: 18px;
+    color: #434343;
+    text-align: left;
+}
+
+.title {
+    color: #1d4d4e;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.title span {
+    color: #434343;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 2rem;
+}
+
+.iconBox {
+    width: 40px;
+    height: 40px;
+    background: #1d4d4e;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.iconBox img {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+@media (max-width: 1024px) {
+    .graficoContainer {
+        width: 100%;
+    }
+
+    .graficoFooter {
+        justify-content: space-between;
+        font-size: 8px;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .containerProposito {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        gap: 2rem;
+    }
+    .descricaoProposito {
+        height: auto;
+    }
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,4 +1,3 @@
-/* Home.module.css */
 .home {
   position: relative;
   width: 100%;
@@ -180,4 +179,30 @@
   background: radial-gradient(circle, #183636, transparent);
   bottom: -450px;
   right: -250px;
+}
+
+@media (max-width: 1024px) {
+  .home {
+    height: auto;
+    padding: 100px 0;
+  }
+  .homeContainer {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .infos {
+    margin-right: 0;
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .infos h1 {
+    font-size: 40px;
+  }
+  .janina {
+    width: 300px;
+  }
+  .card {
+    display: none;
+  }
 }

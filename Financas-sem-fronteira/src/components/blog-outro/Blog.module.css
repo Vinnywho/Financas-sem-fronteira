@@ -1,14 +1,14 @@
-.blog{
+.blog {
     display: flex;
     padding: 4rem 0;
     background-color: #ffffff94;
     justify-content: center;
     margin: 0 auto;
     font-family: "Montserrat", sans-serif;
-;
 }
 
-.blog-container{
+.blog-container {
+    margin-top: -50px;
     border-radius: 3rem;
     padding: 2rem;
     background-color: #fff;
@@ -17,16 +17,15 @@
     align-items: center;
     gap: 2rem;
     width: 1400px;
-    box-shadow: 0 10px 15px 8px #0000001a; /*remover depois*/
 }
 
-.blog-container h1{
+.blog-container h1 {
     font-size: 60px;
     font-weight: 900;
     color: #183636;
 }
 
-.descricao-blog{
+.descricao-blog {
     margin-top: -20px;
     margin-bottom: 20px;
     font-size: 18px;
@@ -35,14 +34,14 @@
     max-width: 600px;
 }
 
-.projeto-principal{
+.projeto-principal {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 3rem;
 }
 
-.projeto-principal img{
+.projeto-principal img {
     width: 690px;
     height: 344px;
     border-radius: 2rem;
@@ -50,25 +49,25 @@
     box-shadow: 6px 6px 20px 0px #00000031;
 }
 
-.projeto-principal-texto{
+.projeto-principal-texto {
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     height: 344px;
     gap: 1rem;
 }
 
-.projeto-principal-texto span{
+.projeto-principal-texto span {
     font-size: 13px;
     color: #ffffff;
     background-color: #183636d1;
     font-weight: 600;
-    padding: 8px 30px 8px 30px;
+    padding: 8px 30px;
     border-radius: 3rem;
     width: fit-content;
-} 
+}
 
-.projeto-principal-texto h3{
+.projeto-principal-texto h3 {
     font-size: 35px;
     font-weight: 800;
     line-height: 1.2;
@@ -76,13 +75,13 @@
     color: #183636;
 }
 
-.projeto-principal-texto p{
+.projeto-principal-texto p {
     font-size: 18px;
     color: #434343;
     text-align: left;
 }
 
-.btn-blog-principal{
+.btn-blog-principal {
     padding: 10px;
     background-color: transparent;
     color: #3F5B5B;
@@ -94,147 +93,153 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-.btn-blog-principal:hover{
+.btn-blog-principal:hover {
     background-color: #3F5B5B;
     color: #fff;
 }
 
 .grid-blog {
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: 480px;
-  gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 10px;
 }
 
 .blog-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-size: cover;
-  justify-content: space-around;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 2rem;
-  padding: 25px;
-  overflow: hidden;
-  box-shadow: 1px 6px 15px 0px #00000022;
-  transition: transform 0.3s ease-in-out;
-  text-decoration: none;
-  cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    border-radius: 2rem;
+    padding: 25px;
+    box-shadow: 1px 6px 15px 0px #00000022;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .blog-card:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .blog-card img {
-  width: 374px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
-
-.blog-card h3,
-.blog-card p{
-  position: relative;
-  z-index: 2;
-  color: rgb(0, 0, 0);
-  font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
 .blog-card h3 {
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: 5px;
-  color: #183636;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    color: #183636;
 }
 
 .blog-card p {
-  font-size: 14px;
-  opacity: 0.9;
+    font-size: 14px;
+    color: #000;
+    opacity: 0.9;
+    margin: 0;
 }
 
-.tipo{
+.tipo {
     background-color: #183636d1;
     color: #fff;
     padding: 5px 15px;
     font-size: 12px;
     font-weight: 400;
     border-radius: 3rem;
+    width: fit-content;
 }
 
 .btn-blog {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  color: #000000;
-  background-color: transparent;
-  border: 2px solid #000000;
-  border-radius: 3rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  z-index: 2;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn-blog:hover {
-  background-color: #000000;
-  color: #ffffff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .btn-blog-todos {
-  margin-top: 10px;
-  padding: 15px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  color: #183636;
-  border: 2px solid #183636;
-  background-color: transparent;
-  border-radius: 3rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-top: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #183636;
+    border: 2px solid #183636;
+    background-color: transparent;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn-blog-todos:hover {
-  background-color: #183636;
-  color: #ffffff;
+    background-color: #183636;
+    color: #ffffff;
 }
 
 .autor {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
 }
 
 .autor div {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .autor-nome {
-  font-size: 14px;
-  font-weight: bold;
-  color: #183636;
+    font-size: 14px;
+    font-weight: bold;
+    color: #183636;
 }
 
 .autor img {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  object-fit: cover;
-  border-radius: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 1rem;
+    object-fit: cover;
 }
 
 .setinha {
-  width: 20px;
-  height: 20px;
-  margin-left: 130px;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+    .blog-container {
+        width: 90%;
+    }
+    .projeto-principal {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .projeto-principal img {
+        width: 100%;
+        height: auto;
+    }
+    .projeto-principal-texto {
+        height: auto;
+    }
+
+    .blog-card {
+        margin-left: -35px;
+    }
 }

@@ -1,4 +1,3 @@
-/* Navbar.module.css */
 .nav {
   display: flex;
   justify-content: center;
@@ -112,4 +111,91 @@
   align-items: center;
   gap: 50px;
   width: 90px;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+  position: absolute;
+  right: 20px;
+}
+
+.burger span {
+  background: #fff;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger span:nth-child(1) {
+  top: 0px;
+}
+.burger span:nth-child(2) {
+  top: 9px;
+}
+.burger span:nth-child(3) {
+  top: 18px;
+}
+
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    padding: 20px;
+    justify-content: space-between;
+    mask-image: none !important;
+  }
+  .logo {
+    position: static;
+    width: 70px;
+  }
+  .navActions {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .navUl {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 34, 29, 0.95);
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease, padding 0.3s ease;
+    padding: 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .navUl.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 30px 0;
+  }
 }

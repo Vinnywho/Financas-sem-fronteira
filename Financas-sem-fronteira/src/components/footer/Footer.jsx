@@ -21,13 +21,13 @@ function Footer() {
         </a>
         <div className={styles.contatos}>
           <a
-            href="https://instagram.com/vinny.who"
+            href="https://www.instagram.com/financassemfronteira/"
             target="_blank"
             rel="noreferrer"
           >
             Instagram
           </a>
-          <a href="mailto:vivini13235@gmail.com">Email</a>
+          <a href="mailto:contato@financassemfronteira.com.br">Email</a>
           <a
             href="https://linkedin.com/in/vinicius-cardoso-de-lima-a9a918227/"
             target="_blank"
@@ -36,12 +36,15 @@ function Footer() {
             LinkedIn
           </a>
           <a
-            href="https://github.com/Vinnywho"
+            href="https://www.instagram.com/financassemfronteira/"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            Whatsapp
           </a>
+          <a href="https://www.youtube.com/channel/UCb03z4A3OTHRIJft0pdbkkQ" target="_blank" rel="noreferrer">
+            Youtube
+            </a>
         </div>
         <p>&copy; 2026 - <b>Finanças sem fronteira</b>. Todos os direitos reservados</p>
         <p>

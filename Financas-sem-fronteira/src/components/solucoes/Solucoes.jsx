@@ -18,31 +18,47 @@ function Servicos() {
             impulsionar sua saúde financeira.
           </p>
         </div>
-      
+
         <div className={styles.solucoesCards}>
           <div className={`${styles.solucoesCard} card-1`}>
             <img src={consultoria} className={styles.solucoesImg} alt="" />
             <h3 className={styles.solucoesCardTitulo}>CONSULTORIA E FOCO</h3>
+            <p>
+              Oferecemos consultoria personalizada para impulsionar sua saúde
+              financeira.
+            </p>
           </div>
 
           <div className={`${styles.solucoesCard} card-2`}>
             <img src={formacao} className={styles.solucoesImg} alt="" />
             <h3 className={styles.solucoesCardTitulo}>FORMAÇÕES E CURSOS</h3>
+            <p>
+              Desenvolvemos cursos e formações personalizadas para fortalecer
+              sua base financeira.
+            </p>
           </div>
 
           <div className={`${styles.solucoesCard} card-3`}>
             <img src={workshop} className={styles.solucoesImg} alt="" />
             <h3 className={styles.solucoesCardTitulo}>WORKSHOPS E OFICINAS</h3>
+            <p>
+              Oferecemos workshops e oficinas práticas para aprimorar suas
+              habilidades financeiras.
+            </p>
           </div>
 
           <div className={`${styles.solucoesCard} card-4`}>
             <img src={mentoria} className={styles.solucoesImg} alt="" />
             <h3 className={styles.solucoesCardTitulo}>MENTORIA EM GRUPO</h3>
+            <p>
+              Oferecemos mentoria em grupo para fortalecer sua jornada
+              financeira com apoio coletivo.
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
-  
+
 export default Servicos;

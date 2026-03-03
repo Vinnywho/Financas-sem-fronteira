@@ -1,4 +1,3 @@
-/* Solucoes.module.css */
 .solucoes {
     display: flex;
     padding: 4rem 0;
@@ -66,6 +65,7 @@
     padding: 20px;
     border-radius: 2rem;
     cursor: pointer;
+    border: #e6e5e5 solid 1px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .solucoesCardTitulo {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #333;
     font-family: 'Montserrat', sans-serif;
@@ -86,7 +86,25 @@
     text-align: center;
 }
 
+.solucoesCard p {
+    margin-top: -15px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    max-width: 200px;
+    font-family: 'Arial', sans-serif;
+}
+
 .solucoesCard:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 15px 8px #18363628;
+}
+
+@media (max-width: 1024px) {
+    .containerSolucoes {
+        width: 90%;
+    }
+    .solucoesTitulo {
+        font-size: 40px;
+    }
 }

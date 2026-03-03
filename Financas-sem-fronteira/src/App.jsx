@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar.jsx";
 import Home from "./components/home/Home.jsx";
 import Solucoes from "./components/solucoes/Solucoes.jsx";
 import Blog from "./components/Blog-outro/Blog.jsx";
+import Proposito from "./components/proposito/Proposito.jsx";
 import Footer from "./components/footer/Footer.jsx";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
         <Navbar />
         <Home />
+        <Proposito/>
         <Solucoes />
         <Blog />
         <Footer />
