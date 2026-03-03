@@ -39,7 +39,7 @@ function Blog() {
 
   return (
     <div className={styles.blog}>
-      <section className={styles['blog-container']}>
+      <section className={styles['blog-container']} id="blog">
         <h1>BLOG</h1>
         <p className={styles['descricao-blog']}>Descubra como podemos impulsionar seu crescimento.</p>
 

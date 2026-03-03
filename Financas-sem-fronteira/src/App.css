@@ -9,3 +9,6 @@ html {
 }
 
 
+#home, #solucoes, #blog, #proposito, #contato {
+  scroll-margin-top: 150px;
+}

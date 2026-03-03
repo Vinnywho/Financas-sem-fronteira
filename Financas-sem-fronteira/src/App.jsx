@@ -4,6 +4,7 @@ import Home from "./components/home/Home.jsx";
 import Solucoes from "./components/solucoes/Solucoes.jsx";
 import Blog from "./components/Blog-outro/Blog.jsx";
 import Proposito from "./components/proposito/Proposito.jsx";
+import Contato from "./components/contato/Contato.jsx";
 import Footer from "./components/footer/Footer.jsx";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Proposito/>
         <Solucoes />
         <Blog />
+        <Contato />
         <Footer />
     </>
   );

@@ -17,14 +17,15 @@ const Navbar = () => {
 
       <ul className={`${styles.navUl} ${isOpen ? styles.active : ''}`}>
         <li><a href="#home" className={styles.navItem} onClick={() => setIsOpen(false)}>HOME</a></li>
+        <li><a href="#proposito" className={styles.navItem} onClick={() => setIsOpen(false)}>PROPOSITO</a></li>
         <li><a href="#solucoes" className={styles.navItem} onClick={() => setIsOpen(false)}>SOLUÇÕES</a></li>
         <li><a href="#blog" className={styles.navItem} onClick={() => setIsOpen(false)}>BLOG</a></li>
-        <li><a href="#galeria" className={styles.navItem} onClick={() => setIsOpen(false)}>GALERIA</a></li>
-        <li><a href="#depoimentos" className={styles.navItem} onClick={() => setIsOpen(false)}>DEPOIMENTOS</a></li>
+        {/* <li><a href="#galeria" className={styles.navItem} onClick={() => setIsOpen(false)}>GALERIA</a></li> */}
+        {/* <li><a href="#depoimentos" className={styles.navItem} onClick={() => setIsOpen(false)}>DEPOIMENTOS</a></li> */}
       </ul>
 
       <div className={styles.navActions}>
-        <button className={styles.contatoBtn}>ENTRE EM CONTATO <span className={styles.seta}>→</span></button>
+        <a href="#contato"><button className={styles.contatoBtn}>ENTRE EM CONTATO <span className={styles.seta}>→</span></button></a>
       </div>
     </nav>
   );
