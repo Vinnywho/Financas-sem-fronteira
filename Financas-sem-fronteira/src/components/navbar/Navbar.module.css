@@ -163,6 +163,8 @@
 
 @media (max-width: 1024px) {
   .nav {
+    position: fixed;
+    width: 100vw;
     padding: 20px;
     justify-content: space-between;
     mask-image: none !important;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contato.css";
+import styles from "./Contato.module.css";
 import { useForm, ValidationError } from "@formspree/react";
 import aos from "aos";
 import "aos/dist/aos.css";
@@ -16,9 +16,9 @@ function Contato() {
 
   if (state.succeeded) {
     return (
-      <section className="contato" id="contato" data-aos="fade-in" data-aos-delay="200">
-        <div className="contato-container">
-          <p className="success-msg">
+      <section className={styles.contato} id="contato" data-aos="fade-in" data-aos-delay="200">
+        <div className={styles.contatoContainer}>
+          <p className={styles.successMsg}>
             Obrigado! Sua mensagem foi enviada com sucesso.
           </p>
         </div>
@@ -27,10 +27,10 @@ function Contato() {
   }
 
   return (
-    <section className="contato" id="contato">
-      <div className="contato-container">
-        <div className="descricao-contato" data-aos="fade-right" data-aos-delay="100">
-          <h1 className="title">Contato</h1>
+    <section className={styles.contato} id="contato">
+      <div className={styles.contatoContainer}>
+        <div className={styles.descricaoContato} data-aos="fade-right" data-aos-delay="100">
+          <h1 className={styles.title}>Contato</h1>
           <p>
             Para entrar em contato preencha corretamente o formulário,
             retornaremos o mais breve possível!
@@ -52,9 +52,9 @@ function Contato() {
           </p>
         </div>
 
-        <form className="form" onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <input
-            className="input"
+            className={styles.input}
             type="text"
             name="name"
             placeholder="Digite seu nome"
@@ -65,7 +65,7 @@ function Contato() {
           <ValidationError prefix="Name" field="name" errors={state.errors} />
 
           <input
-            className="input"
+            className={styles.input}
             type="email"
             name="email"
             placeholder="Digite seu email"
@@ -76,7 +76,7 @@ function Contato() {
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 
           <textarea
-            className="textarea"
+            className={styles.textarea}
             name="message"
             placeholder="Digite sua mensagem..."
             required
@@ -89,7 +89,7 @@ function Contato() {
             errors={state.errors}
           />
 
-          <button className="button" type="submit" disabled={state.submitting}>
+          <button className={styles.button} type="submit" disabled={state.submitting}>
             {state.submitting ? "Enviando..." : "Enviar"}
           </button>
         </form>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&family=Bagel+Fat+One&family=Barrio&family=Bitcount:wght@100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cherry+Bomb+One&family=Coral+Pixels&family=Handjet:wght,ELSH@100..900,2&family=Honk:MORF@15&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Rubik+Glitch&display=swap');
-
+/* Contato.module.css */
 .contato {
   display: flex;
   padding: 4rem 0;
@@ -8,7 +7,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.contato-container {
+.contatoContainer {
   margin-top: -70px;
   border-radius: 3rem;
   padding: 2rem;
@@ -21,15 +20,15 @@
   max-width: 90%;
 }
 
-.descricao-contato {
+.descricaoContato {
   display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 294px;
-    gap: 1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 294px;
+  gap: 1rem;
 }
 
-.descricao-contato p {
+.descricaoContato p {
   font-size: 18px;
   color: #434343;
   text-align: left;
@@ -53,7 +52,7 @@
   width: 100%;
 }
 
-input, textarea {
+.input, .textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
@@ -77,7 +76,7 @@ input, textarea {
   background-color: #3F5B5B;
 }
 
-.success-msg {
+.successMsg {
   text-align: center;
   padding: 3rem 2rem;
   font-size: 1.25rem;
@@ -90,7 +89,7 @@ input, textarea {
 }
 
 @media (max-width: 1024px) {
-  .contato-container {
+  .contatoContainer {
     flex-direction: column;
     margin-top: 0;
     width: 90%;
