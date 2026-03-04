@@ -1,15 +1,26 @@
+import React from "react";
 import "./Contato.css";
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 function Contato() {
+  React.useEffect(() => {
+    aos.init({ duration: 1000,
+      once: true
+    });
+    
+  }, []);
 
   const [state, handleSubmit] = useForm("mqedrgvk");
 
   if (state.succeeded) {
     return (
-      <section className="contato" id="contato">
+      <section className="contato" id="contato" data-aos="fade-in" data-aos-delay="200">
         <div className="contato-container">
-          <p className="success-msg">Obrigado! Sua mensagem foi enviada com sucesso.</p>
+          <p className="success-msg">
+            Obrigado! Sua mensagem foi enviada com sucesso.
+          </p>
         </div>
       </section>
     );
@@ -18,7 +29,7 @@ function Contato() {
   return (
     <section className="contato" id="contato">
       <div className="contato-container">
-        <div className="descricao-contato">
+        <div className="descricao-contato" data-aos="fade-right" data-aos-delay="100">
           <h1 className="title">Contato</h1>
           <p>
             Para entrar em contato preencha corretamente o formulário,
@@ -32,7 +43,7 @@ function Contato() {
           </p>
           <p>
             <a
-              href="https://www.instagram.com/financassemfronteira/"
+              href="https://api.whatsapp.com/send?l=pt_BR&phone=5511998643125"
               target="_blank"
               rel="noreferrer"
             >
@@ -48,6 +59,8 @@ function Contato() {
             name="name"
             placeholder="Digite seu nome"
             required
+            data-aos="fade-left"
+            data-aos-delay="100"
           />
           <ValidationError prefix="Name" field="name" errors={state.errors} />
 
@@ -57,6 +70,8 @@ function Contato() {
             name="email"
             placeholder="Digite seu email"
             required
+            data-aos="fade-left"
+            data-aos-delay="200"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 
@@ -65,14 +80,16 @@ function Contato() {
             name="message"
             placeholder="Digite sua mensagem..."
             required
+            data-aos="fade-left"
+            data-aos-delay="300"
           />
-          <ValidationError prefix="Message" field="message" errors={state.errors} />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
 
-          <button 
-            className="button" 
-            type="submit" 
-            disabled={state.submitting}
-          >
+          <button className="button" type="submit" disabled={state.submitting}>
             {state.submitting ? "Enviando..." : "Enviar"}
           </button>
         </form>

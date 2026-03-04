@@ -36,7 +36,7 @@ function Footer() {
             LinkedIn
           </a>
           <a
-            href="https://www.instagram.com/financassemfronteira/"
+            href="https://api.whatsapp.com/send?l=pt_BR&phone=5511998643125"
             target="_blank"
             rel="noreferrer"
           >

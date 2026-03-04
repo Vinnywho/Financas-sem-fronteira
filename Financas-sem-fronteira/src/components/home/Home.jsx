@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "./Home.module.css";
 import janina from "../../assets/images/Janina.png";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  React.useEffect(() => {
+      aos.init({ duration: 1000,
+        once: true
+      });
+      
+    }, []);
   return (
     <section className={styles.home} id="home">
       <div className={styles.backgroundContainer}>
@@ -12,22 +20,22 @@ function Home() {
 
       <section className={styles.homeContainer}>
         <div className={styles.infos}>
-          <h1>
+          <h1 data-aos="fade-right">
             CONSTRUA SEU <span className={styles.destaque}>LEGADO</span> FINANCEIRO
           </h1>
-          <p>
+          <p data-aos="fade-right" data-aos-delay="100">
             <span className={styles.destaque}>FINANÇAS SEM FRONTEIRA</span> é uma empresa voltada para educação
             financeira comportamental e tem como objetivo enriquecer a relação
             das pessoas com o dinheiro. Nosso propósito é disseminar a educação
             financeira comportamental oferecendo um tratamento multidisciplinar,
             com o intuito de ver o ser humano como biopsicossocioespiritual.
           </p>
-          <div className={styles.botoesHome}>
+          <div className={styles.botoesHome} data-aos="fade-right" data-aos-delay="300">
             <button className={styles.consultoriaBtn}>Consultoria</button>
             <button className={styles.planosBtn}>Conheça os planos</button>
           </div>
         </div>
-        <div className={styles.janinaWrapper}>
+        <div className={styles.janinaWrapper} data-aos="fade-left" data-aos-delay="500">
           <img className={styles.janina} src={janina} alt="Janina" />
           
           <div className={`${styles.card} ${styles.cardPos1}`}>

@@ -5,8 +5,17 @@ import foto1 from '../../assets/images/Quanto-custa-sua-liberdade-980x551.webp';
 import foto2 from '../../assets/images/Foto2.webp';
 import foto3 from '../../assets/images/OPCAO-02-980x551.webp';
 import vini from '../../assets/images/vini-financas.jpeg';
+import aos from "aos";
+import "aos/dist/aos.css";
 
 function Blog() {
+  React.useEffect(() => {
+      aos.init({ duration: 1000,
+        once: true
+      });
+      
+    }, []);
+
   const projetosLista = [
       {
         title: "Meu primeiro salário: e agora?",
@@ -38,14 +47,16 @@ function Blog() {
     ];
 
   return (
-    <div className={styles.blog}>
+    <div className={styles.blog} >
       <section className={styles['blog-container']} id="blog">
-        <h1>BLOG</h1>
-        <p className={styles['descricao-blog']}>Descubra como podemos impulsionar seu crescimento.</p>
+        <h1 data-aos="zoom-in" data-aos-delay="100">BLOG</h1>
+        <p className={styles['descricao-blog']} data-aos="fade-up" data-aos-delay="300">
+          Descubra como podemos impulsionar seu crescimento.
+        </p>
 
-        <div className={styles['projeto-principal']}>
+        <div className={styles['projeto-principal']} data-aos="fade-right" data-aos-delay="500">
           <img src={foto1} alt="Imagem do artigo" />
-          <div className={styles['projeto-principal-texto']}>
+          <div className={styles['projeto-principal-texto']} data-aos="fade-left" data-aos-delay="700">
             <span>Dicas</span>
             <h3>Meu primeiro salário: e agora?</h3>
             <p>Meu primeiro salário: e agora? Conquistar o primeiro salário é um marco na vida da maioria das pessoas, denota  o reconhecimento de um esforço,  primeiro sinal de independência financeira, a porta de entrada para novos sonhos. No entanto, também é o momento dos...</p>
@@ -55,7 +66,7 @@ function Blog() {
 
         <div className={styles['grid-blog']}>
             {projetosLista.map((proj, index) => (
-            <ProjectCard 
+            <ProjectCard
                 key={index}
                 title={proj.title}
                 desc={proj.desc}
