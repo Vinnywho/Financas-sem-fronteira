@@ -99,7 +99,7 @@
 
 .solucoesCard:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 15px 8px #18363628;
+    box-shadow: 0px 8px 10px #18363628;
 }
 
 @media (max-width: 1024px) {

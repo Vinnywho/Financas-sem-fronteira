@@ -116,14 +116,15 @@
     background: #fff;
     border-radius: 2rem;
     padding: 25px;
-    box-shadow: 1px 6px 15px 0px #00000022;
-    transition: transform 0.3s ease-in-out;
+    border: #e6e5e5 solid 1px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-decoration: none;
     cursor: pointer;
 }
 
 .blog-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 10px #18363628;
 }
 
 .blog-card img {
