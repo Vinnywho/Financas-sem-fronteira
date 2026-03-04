@@ -75,6 +75,18 @@ input, textarea {
   background-color: #3F5B5B;
 }
 
+.success-msg {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 1.25rem;
+  color: #183636;
+  border: 2px solid #183636;
+  border-radius: 1rem;
+  background-color: #f8fcfc; /* Um tom bem suave para destacar */
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 @media (max-width: 1024px) {
   .contato-container {
     flex-direction: column;

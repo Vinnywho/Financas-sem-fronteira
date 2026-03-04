@@ -1,50 +1,18 @@
-import { useState } from "react";
 import "./Contato.css";
-import emailjs from "@emailjs/browser";
+import { useForm, ValidationError } from '@formspree/react';
 
 function Contato() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
-  function sendEmail(e) {
-    e.preventDefault();
+  const [state, handleSubmit] = useForm("mqedrgvk");
 
-    if (name === "" || email === "" || message === "") {
-      alert("Preencha todos os campos");
-      return;
-    }
-
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message,
-    };
-
-    emailjs
-      .send(
-        "service_9l7h8qj",
-        "template_9l7h8qj",
-        templateParams,
-        "user_9l7h8qj",
-      )
-
-      .then(
-        (response) => {
-          console.log(
-            "Email enviado com sucesso!",
-            response.status,
-            response.text,
-          );
-          setName("");
-          setEmail("");
-          setMessage("");
-        },
-        (err) => {
-          console.log("Erro ao enviar email:", err);
-          alert("Erro ao enviar email, tente novamente mais tarde.");
-        },
-      );
+  if (state.succeeded) {
+    return (
+      <section className="contato" id="contato">
+        <div className="contato-container">
+          <p className="success-msg">Obrigado! Sua mensagem foi enviada com sucesso.</p>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -73,31 +41,40 @@ function Contato() {
           </p>
         </div>
 
-        <form className="form" onSubmit={sendEmail}>
+        <form className="form" onSubmit={handleSubmit}>
           <input
             className="input"
             type="text"
+            name="name"
             placeholder="Digite seu nome"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
+            required
           />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
 
           <input
             className="input"
-            type="text"
+            type="email"
+            name="email"
             placeholder="Digite seu email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+            required
           />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
 
           <textarea
             className="textarea"
+            name="message"
             placeholder="Digite sua mensagem..."
-            onChange={(e) => setMessage(e.target.value)}
-            value={message}
+            required
           />
+          <ValidationError prefix="Message" field="message" errors={state.errors} />
 
-          <input className="button" type="submit" value="Enviar" />
+          <button 
+            className="button" 
+            type="submit" 
+            disabled={state.submitting}
+          >
+            {state.submitting ? "Enviando..." : "Enviar"}
+          </button>
         </form>
       </div>
     </section>
