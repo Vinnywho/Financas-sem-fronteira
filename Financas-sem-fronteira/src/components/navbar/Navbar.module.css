@@ -1,20 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Bagel+Fat+One&family=Barrio&family=Bitcount:wght@100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cherry+Bomb+One&family=Coral+Pixels&family=Handjet:wght,ELSH@100..900,2&family=Honk:MORF@15&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Rubik+Glitch&display=swap');
 
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90px;
-  width: 100%;
+a{
+  text-decoration: none;
+    color: inherit;
+}
+
+.navContainer {
   position: fixed;
-  background-color: rgba(0, 34, 29, 0.199);
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  padding: 60px;
-  padding-bottom: 80px;
-  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 34, 29, 0.199);
   backdrop-filter: blur(5px);
   mask-image: linear-gradient(to bottom, black 58%, transparent 100%);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1550px;
+  margin: 0 auto;
+  height: 90px;
+  padding: 0 130px;
 }
 
 .nav a:hover {
@@ -74,9 +86,6 @@
   gap: 20px;
   width: 200px;
   text-align: left;
-  position: absolute;
-  right: 130px;
-  transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
 }
 
@@ -107,11 +116,8 @@
 }
 
 .logo {
-  position: absolute;
-  left: 130px;
   display: flex;
   align-items: center;
-  gap: 50px;
   width: 90px;
 }
 
@@ -124,8 +130,6 @@
   border: none;
   cursor: pointer;
   z-index: 2000;
-  position: absolute;
-  right: 20px;
 }
 
 .burger span {
@@ -139,56 +143,36 @@
   transition: all 0.3s ease-in-out;
 }
 
-.burger span:nth-child(1) {
-  top: 0px;
-}
-.burger span:nth-child(2) {
-  top: 9px;
-}
-.burger span:nth-child(3) {
-  top: 18px;
-}
+.burger span:nth-child(1) { top: 0px; }
+.burger span:nth-child(2) { top: 9px; }
+.burger span:nth-child(3) { top: 18px; }
 
-.burger.open span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 9px;
-}
-.burger.open span:nth-child(2) {
-  opacity: 0;
-}
-.burger.open span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 9px;
-}
+.burger.open span:nth-child(1) { transform: rotate(45deg); top: 9px; }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: rotate(-45deg); top: 9px; }
 
 @media (max-width: 1024px) {
   .nav {
-    position: fixed;
-    width: 100vw;
     padding: 20px;
     justify-content: space-between;
-    mask-image: none !important;
   }
-  .logo {
-    position: static;
-    width: 70px;
+  .navContainer {
+    position: fixed !important;
+    width: 100vw;
   }
-  .navActions {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
+  .logo { width: 70px; }
+  .navActions { display: none; }
+  .burger { display: block; }
   .navUl {
     text-align: center;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 90px;
+    top: 120px;
     left: 0;
     width: 100%;
     background-color: rgba(0, 34, 29, 0.95);
-    z-index: 1000;
+    z-index: 9999;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -196,7 +180,6 @@
     padding: 0;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
-
   .navUl.active {
     max-height: 500px;
     opacity: 1;
