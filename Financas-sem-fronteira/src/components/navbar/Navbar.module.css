@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&family=Bagel+Fat+One&family=Barrio&family=Bitcount:wght@100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cherry+Bomb+One&family=Coral+Pixels&family=Handjet:wght,ELSH@100..900,2&family=Honk:MORF@15&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Rubik+Glitch&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Bagel+Fat+One&family=Barrio&family=Bitcount:wght@100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cherry+Bomb+One&family=Coral+Pixels&family=Handjet:wght,ELSH@100..900,2&family=Honk:MORF@15&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Rubik+Glitch&display=swap");
 
-a{
+a {
   text-decoration: none;
-    color: inherit;
+  color: inherit;
 }
 
 .navContainer {
@@ -12,7 +12,7 @@ a{
   width: 100%;
   z-index: 1000;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   background-color: rgba(0, 34, 29, 0.199);
   backdrop-filter: blur(5px);
   mask-image: linear-gradient(to bottom, black 58%, transparent 100%);
@@ -106,19 +106,23 @@ a{
 .contatoBtn:hover {
   background-color: #000000;
   color: #ffffff;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 .contatoBtn:hover .seta {
   background-color: #ffffff;
   color: #000000;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  width: 90px;
+  width: 80px;
 }
 
 .burger {
@@ -143,32 +147,53 @@ a{
   transition: all 0.3s ease-in-out;
 }
 
-.burger span:nth-child(1) { top: 0px; }
-.burger span:nth-child(2) { top: 9px; }
-.burger span:nth-child(3) { top: 18px; }
+.burger span:nth-child(1) {
+  top: 0px;
+}
+.burger span:nth-child(2) {
+  top: 9px;
+}
+.burger span:nth-child(3) {
+  top: 18px;
+}
 
-.burger.open span:nth-child(1) { transform: rotate(45deg); top: 9px; }
-.burger.open span:nth-child(2) { opacity: 0; }
-.burger.open span:nth-child(3) { transform: rotate(-45deg); top: 9px; }
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
 
 @media (max-width: 1024px) {
   .nav {
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     justify-content: space-between;
   }
   .navContainer {
     position: fixed !important;
     width: 100vw;
+    mask-image: none;
   }
-  .logo { width: 70px; }
-  .navActions { display: none; }
-  .burger { display: block; }
+  .logo {
+    width: 70px;
+  }
+  .navActions {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
   .navUl {
     text-align: center;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 120px;
+    top: 110px;
     left: 0;
     width: 100%;
     background-color: rgba(0, 34, 29, 0.95);
@@ -176,7 +201,10 @@ a{
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.4s ease-in-out, opacity 0.3s ease, padding 0.3s ease;
+    transition:
+      max-height 0.4s ease-in-out,
+      opacity 0.3s ease,
+      padding 0.3s ease;
     padding: 0;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
