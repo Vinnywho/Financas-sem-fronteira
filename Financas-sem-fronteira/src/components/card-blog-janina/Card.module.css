@@ -1,0 +1,103 @@
+.aosWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.projeto-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    border: 1px solid #3f3f3f4f;
+    border-radius: 3rem;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.projeto-principal:hover {
+    transform: translateY(-10px);
+    background-color: #f7f6f6;
+}
+
+.projeto-principal img {
+    width: 50%;
+    max-width: 690px;
+    height: 344px;
+    border-radius: 2rem;
+    object-fit: cover;
+    border: 1px solid #3f3f3f4f;
+}
+
+.projeto-principal-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.projeto-principal-texto span {
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #183636d1;
+    font-weight: 600;
+    padding: 8px 30px;
+    border-radius: 3rem;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+}
+
+.projeto-principal-texto h3 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #183636;
+    font-family: "Montserrat", sans-serif;
+}
+
+.projeto-principal-texto p {
+    font-size: 17px;
+    color: #434343;
+    text-align: left;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn-blog-principal {
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #3F5B5B;
+    border: 2px solid #3F5B5B;
+    border-radius: 3rem;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-blog-principal:hover {
+    background-color: #3F5B5B;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .projeto-principal {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-radius: 2rem;
+    }
+    .projeto-principal img {
+        width: 100%;
+        height: auto;
+    }
+    .projeto-principal-texto {
+        width: 100%;
+    }
+}

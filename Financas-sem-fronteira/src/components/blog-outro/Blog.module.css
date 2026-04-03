@@ -18,7 +18,8 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
 }
 
 .blog-container h1 {
@@ -41,10 +42,12 @@
     flex-direction: row;
     align-items: center;
     gap: 3rem;
+    width: 100%;
 }
 
 .projeto-principal img {
-    width: 690px;
+    width: 50%;
+    max-width: 690px;
     height: 344px;
     border-radius: 2rem;
     object-fit: cover;
@@ -57,6 +60,7 @@
     justify-content: space-evenly;
     height: 344px;
     gap: 1rem;
+    flex: 1;
 }
 
 .projeto-principal-texto span {
@@ -102,7 +106,6 @@
 
 .grid-blog {
     width: 100%;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
@@ -120,6 +123,7 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-decoration: none;
     cursor: pointer;
+    height: 100%;
 }
 
 .blog-card:hover {
@@ -159,25 +163,11 @@
     width: fit-content;
 }
 
-.btn-blog {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #000000;
-    background-color: transparent;
-    border: 2px solid #000000;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.btn-blog:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
-
 .btn-blog-todos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     margin-top: 10px;
     padding: 15px 30px;
     font-size: 16px;
@@ -200,6 +190,7 @@
     align-items: center;
     gap: 10px;
     margin-top: auto;
+    padding-top: 15px;
 }
 
 .autor div {
@@ -228,7 +219,7 @@
 
 @media (max-width: 1024px) {
     .blog-container {
-        width: 90%;
+        width: 95%;
     }
     .projeto-principal {
         flex-direction: column;
@@ -236,13 +227,14 @@
     }
     .projeto-principal img {
         width: 100%;
+        max-width: 100%;
         height: auto;
     }
     .projeto-principal-texto {
         height: auto;
+        padding: 0 1rem;
     }
-
-    .blog-card {
-        margin-left: -35px;
+    .grid-blog {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anta&family=Bagel+Fat+One&family=Barrio&family=Bitcount:wght@100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cherry+Bomb+One&family=Coral+Pixels&family=Handjet:wght,ELSH@100..900,2&family=Honk:MORF@15&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 a {
   text-decoration: none;
@@ -15,7 +15,12 @@ a {
   padding-bottom: 10px;
   background-color: rgba(0, 34, 29, 0.199);
   backdrop-filter: blur(5px);
-  mask-image: linear-gradient(to bottom, black 58%, transparent 100%);
+  transition: background-color 0.3s ease;
+}
+
+.otherNavbar {
+  background-color: #183636; 
+  backdrop-filter: none;
 }
 
 .nav {
@@ -39,17 +44,20 @@ a {
   display: flex;
   flex-direction: row;
   gap: 40px;
+  align-items: center;
 }
 
 .navItem {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   padding-bottom: 5px;
+  cursor: pointer;
 }
 
 .navItem::after {
@@ -68,6 +76,60 @@ a {
 .navItem:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.caret {
+  margin-left: 8px;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #143233d7;
+  min-width: 280px;
+  list-style: none;
+  padding: 15px 0;
+  border-radius: 8px;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.dropdownMenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownMenu li a {
+  padding: 12px 25px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.dropdownMenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .contatoBtn {
@@ -91,7 +153,7 @@ a {
 
 .seta {
   background-color: #000000;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px;
   color: #ffffff;
   width: 45px;
   height: 45px;
@@ -106,17 +168,11 @@ a {
 .contatoBtn:hover {
   background-color: #000000;
   color: #ffffff;
-  transition:
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
 }
 
 .contatoBtn:hover .seta {
   background-color: #ffffff;
   color: #000000;
-  transition:
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
 }
 
 .logo {
@@ -147,40 +203,22 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-.burger span:nth-child(1) {
-  top: 0px;
-}
-.burger span:nth-child(2) {
-  top: 9px;
-}
-.burger span:nth-child(3) {
-  top: 18px;
-}
+.burger span:nth-child(1) { top: 0px; }
+.burger span:nth-child(2) { top: 9px; }
+.burger span:nth-child(3) { top: 18px; }
 
-.burger.open span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 9px;
-}
-.burger.open span:nth-child(2) {
-  opacity: 0;
-}
-.burger.open span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 9px;
-}
+.burger.open span:nth-child(1) { transform: rotate(45deg); top: 9px; }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: rotate(-45deg); top: 9px; }
 
 @media (max-width: 1024px) {
   .nav {
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px;
     justify-content: space-between;
   }
   .navContainer {
     position: fixed !important;
     width: 100vw;
-    mask-image: none;
-  }
-  .logo {
-    width: 70px;
   }
   .navActions {
     display: none;
@@ -193,24 +231,55 @@ a {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 110px;
+    top: 109px;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 34, 29, 0.95);
+    background-color: rgba(0, 34, 29, 0.98);
     z-index: 9999;
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     opacity: 0;
-    transition:
-      max-height 0.4s ease-in-out,
-      opacity 0.3s ease,
-      padding 0.3s ease;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
     padding: 0;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   }
   .navUl.active {
-    max-height: 500px;
+    max-height: 100vh;
     opacity: 1;
     padding: 30px 0;
+  }
+
+  .dropdownMenu {
+    position: static;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: none;
+    min-width: unset;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: max-height 0.3s ease-in-out;
+    display: flex;
+  }
+
+  .dropdownMenu.show {
+    max-height: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .dropdownMenu li a {
+    padding: 15px 0;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  .dropdownContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
