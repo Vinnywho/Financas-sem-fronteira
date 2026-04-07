@@ -1,0 +1,127 @@
+.sobre-nos {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 50px 0;
+  background-color: #ffffff;
+  isolation: isolate;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.sobre-nos-container {
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.logoesticada {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  margin-top: 4rem;
+}
+
+p, li {
+  font-size: 18px;
+  color: #3f3f3f;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+.introText {
+  font-size: 18px;
+}
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 1rem 0;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.cardContent h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #183636;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.cardContent p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #434343;
+  max-width: 90%;
+}
+
+.cardIcon {
+  width: 70px;
+  height: 70px;
+}
+
+.extraContent {
+  width: 100%;
+  max-width: 950px;
+  margin: -10vh auto 0;
+  padding: 2rem;
+  position: relative;
+  z-index: 20;
+  margin-top: -200px;
+}
+
+.listaPropostas {
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+  color: #3f3f3f;
+}
+
+.listaPropostas li {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .sobre-nos {
+    padding: 60px 10px 30px 10px;
+  }
+  .cardContent h2 {
+    font-size: 1.4rem;
+  }
+  .cardContent p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+  .extraContent {
+    margin-top: -200px;
+    padding: 1rem;
+  }
+  .introText {
+    font-size: 16px;
+  }
+  .listaPropostas li {
+    font-size: 16px;
+  }
+}

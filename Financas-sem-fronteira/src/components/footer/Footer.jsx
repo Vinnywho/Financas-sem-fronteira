@@ -2,10 +2,23 @@ import React from "react";
 import styles from "./Footer.module.css";
 
 function Footer() {
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <footer className={styles.footer}>
-        <a href="#home" className={styles.scrollTop}>
+        <button 
+          onClick={scrollToTop} 
+          className={styles.scrollTop} 
+          aria-label="Voltar ao topo"
+          style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+        >
           <svg
             width="58"
             height="62"
@@ -18,7 +31,8 @@ function Footer() {
               fill="white"
             />
           </svg>
-        </a>
+        </button>
+
         <div className={styles.contatos}>
           <a
             href="https://www.instagram.com/financassemfronteira/"
@@ -40,16 +54,16 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            Whatsapp
+            WhatsApp
           </a>
-          <a href="https://www.youtube.com/channel/UCb03z4A3OTHRIJft0pdbkkQ" target="_blank" rel="noreferrer">
-            Youtube
-            </a>
         </div>
-        <p>&copy; 2026 - <b>Finanças sem fronteira</b>. Todos os direitos reservados</p>
-        <p>
+
+        <div className={styles.direitos}>
+          <p>&copy; 2026 - <b>Finanças sem fronteira</b>. Todos os direitos reservados</p>
+          <p>
             Desenvolvido por <a href="https://linkedin.com/in/vinicius-cardoso-de-lima-a9a918227/" target="_blank" rel="noreferrer"><b>Vinicius Cardoso de Lima</b></a>
-        </p>
+          </p>
+        </div>
       </footer>
     </div>
   );

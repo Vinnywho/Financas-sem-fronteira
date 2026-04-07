@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "../App";
 import Inicio from "../pages/Inicio.jsx";
 import BlogJanina from "../pages/BlogJanina.jsx";
+import SobreNos from "../pages/SobreNos.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 
 function Rotas() {
@@ -13,6 +14,7 @@ function Rotas() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/blog-janina" element={<BlogJanina />} />
+          <Route path="/sobre-nos" element={<SobreNos />} />
         </Routes>
       </Router> 
     </div>

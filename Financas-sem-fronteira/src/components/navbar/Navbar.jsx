@@ -71,6 +71,12 @@ const Navbar = ({ isOtherPage }) => {
               BLOG
             </HashLink>
           </li>
+
+          <li>
+            <Link to="/sobre-nos" className={styles.navItem} onClick={closeAll}>
+              SOBRE NÓS
+            </Link>
+          </li>
         </ul>
 
         <div className={styles.navActions}>
