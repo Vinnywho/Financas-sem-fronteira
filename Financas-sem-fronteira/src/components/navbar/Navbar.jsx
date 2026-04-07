@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./Navbar.module.css";
 import logo from "../../assets/icons/Logo.svg";
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = ({ isOtherPage }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,9 @@ const Navbar = ({ isOtherPage }) => {
   return (
     <div className={`${styles.navContainer} ${isOtherPage ? styles.otherNavbar : ""}`}>
       <nav className={styles.nav}>
-        <Link to="/" href="#home" className={styles.logo}>
+        <HashLink to="/#home" className={styles.logo} onClick={closeAll}>
           <img src={logo} alt="Logo" className={styles.logo} />
-        </Link>
+        </HashLink>
 
         <button
           className={`${styles.burger} ${isOpen ? styles.open : ""}`}
@@ -37,14 +38,14 @@ const Navbar = ({ isOtherPage }) => {
 
         <ul className={`${styles.navUl} ${isOpen ? styles.active : ""}`}>
           <li>
-            <a href="#home" className={styles.navItem} onClick={closeAll}>
+            <HashLink smooth to="/#home" className={styles.navItem} onClick={closeAll}>
               HOME
-            </a>
+            </HashLink>
           </li>
           <li>
-            <a href="#proposito" className={styles.navItem} onClick={closeAll}>
+            <HashLink smooth to="/#proposito" className={styles.navItem} onClick={closeAll}>
               PROPÓSITO
-            </a>
+            </HashLink>
           </li>
 
           <li 
@@ -53,31 +54,31 @@ const Navbar = ({ isOtherPage }) => {
             onMouseLeave={() => window.innerWidth > 1024 && setShowDropdown(false)}
             onClick={toggleDropdown}
           >
-            <a href="#solucoes" className={styles.navItem}>
+            <HashLink smooth to="/#solucoes" className={styles.navItem}>
               SOLUÇÕES <span className={`${styles.caret} ${showDropdown ? styles.rotate : ""}`}>▾</span>
-            </a>
+            </HashLink>
             
             <ul className={`${styles.dropdownMenu} ${showDropdown ? styles.show : ""}`}>
-              <li><a href="#afinco" onClick={closeAll}>CONSULTORIA E FOCO</a></li>
-              <li><a href="#cursos" onClick={closeAll}>FORMAÇÕES E CURSOS</a></li>
-              <li><a href="#palestras" onClick={closeAll}>WORKSHOPS E OFICINAS</a></li>
-              <li><a href="#roda" onClick={closeAll}>MENTORIA EM GRUPO</a></li>
+              <li><HashLink smooth to="/#afinco" onClick={closeAll}>CONSULTORIA E FOCO</HashLink></li>
+              <li><HashLink smooth to="/#cursos" onClick={closeAll}>FORMAÇÕES E CURSOS</HashLink></li>
+              <li><HashLink smooth to="/#palestras" onClick={closeAll}>WORKSHOPS E OFICINAS</HashLink></li>
+              <li><HashLink smooth to="/#roda" onClick={closeAll}>MENTORIA EM GRUPO</HashLink></li>
             </ul>
           </li>
 
           <li>
-            <a href="#blog" className={styles.navItem} onClick={closeAll}>
+            <HashLink smooth to="/#blog" className={styles.navItem} onClick={closeAll}>
               BLOG
-            </a>
+            </HashLink>
           </li>
         </ul>
 
         <div className={styles.navActions}>
-          <a href="#contato">
+          <HashLink smooth to="/#contato" onClick={closeAll}>
             <button className={styles.contatoBtn}>
               ENTRE EM CONTATO <span className={styles.seta}>→</span>
             </button>
-          </a>
+          </HashLink>
         </div>
       </nav>
     </div>
