@@ -1,71 +1,115 @@
 import React from "react";
 import styles from "./Footer.module.css";
 
+const links = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/financassemfronteira/",
+    external: true,
+  },
+  {
+    label: "Email",
+    href: "mailto:contato@financassemfronteira.com.br",
+    external: false,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/vinicius-cardoso-de-lima-a9a918227/",
+    external: true,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://api.whatsapp.com/send?l=pt_BR&phone=5511998643125",
+    external: true,
+  },
+];
+
 function Footer() {
   const scrollToTop = (e) => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div>
-      <footer className={styles.footer}>
-        <button 
-          onClick={scrollToTop} 
-          className={styles.scrollTop} 
-          aria-label="Voltar ao topo"
-          style={{ background: 'none', border: 'none', cursor: 'pointer' }}
-        >
-          <svg
-            width="58"
-            height="62"
-            viewBox="0 0 58 62"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.95188e-06 29.0472V19.7055L28.4631 0.000272558L57.2181 19.7055V29.0472L28.4631 10.2178L4.95188e-06 29.0472ZM24.2301 61.8892V8.17428H32.842V61.8892H24.2301Z"
-              fill="white"
-            />
-          </svg>
-        </button>
+    <footer className={styles.footer}>
+      {/* Decorative top border line */}
+      <div className={styles.topBorder} aria-hidden="true">
+        <span /><span /><span />
+      </div>
 
-        <div className={styles.contatos}>
-          <a
-            href="https://www.instagram.com/financassemfronteira/"
-            target="_blank"
-            rel="noreferrer"
+      <div className={styles.inner}>
+        {/* Brand block */}
+        <div className={styles.brand}>
+          <p className={styles.brandName}>Finanças<br />sem Fronteira</p>
+          <p className={styles.brandTagline}>
+            Educação financeira comportamental
+          </p>
+        </div>
+
+        {/* Nav links */}
+        <nav className={styles.nav} aria-label="Links de contato">
+          <p className={styles.navLabel}>Contato</p>
+          <ul className={styles.navList}>
+            {links.map(({ label, href, external }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  className={styles.navLink}
+                  {...(external
+                    ? { target: "_blank", rel: "noreferrer" }
+                    : {})}
+                >
+                  <span className={styles.navArrow} aria-hidden="true">→</span>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Scroll to top */}
+        <div className={styles.topWrap}>
+          <button
+            onClick={scrollToTop}
+            className={styles.scrollTop}
+            aria-label="Voltar ao topo"
           >
-            Instagram
-          </a>
-          <a href="mailto:contato@financassemfronteira.com.br">Email</a>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="18 15 12 9 6 15" />
+            </svg>
+          </button>
+          <p className={styles.topLabel}>Topo</p>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className={styles.bottomBar}>
+        <p className={styles.copy}>
+          &copy; 2026 Finanças sem Fronteira. Todos os direitos reservados.
+        </p>
+        <p className={styles.dev}>
+          Desenvolvido por{" "}
           <a
             href="https://linkedin.com/in/vinicius-cardoso-de-lima-a9a918227/"
             target="_blank"
             rel="noreferrer"
+            className={styles.devLink}
           >
-            LinkedIn
+            Vinicius Cardoso de Lima
           </a>
-          <a
-            href="https://api.whatsapp.com/send?l=pt_BR&phone=5511998643125"
-            target="_blank"
-            rel="noreferrer"
-          >
-            WhatsApp
-          </a>
-        </div>
-
-        <div className={styles.direitos}>
-          <p>&copy; 2026 - <b>Finanças sem fronteira</b>. Todos os direitos reservados</p>
-          <p>
-            Desenvolvido por <a href="https://linkedin.com/in/vinicius-cardoso-de-lima-a9a918227/" target="_blank" rel="noreferrer"><b>Vinicius Cardoso de Lima</b></a>
-          </p>
-        </div>
-      </footer>
-    </div>
+        </p>
+      </div>
+    </footer>
   );
 }
 
