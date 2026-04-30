@@ -59,10 +59,10 @@ const Navbar = ({ isOtherPage }) => {
             </HashLink>
             
             <ul className={`${styles.dropdownMenu} ${showDropdown ? styles.show : ""}`}>
-              <li><HashLink smooth to="/#afinco" onClick={closeAll}>CONSULTORIA E FOCO</HashLink></li>
-              <li><HashLink smooth to="/#cursos" onClick={closeAll}>FORMAÇÕES E CURSOS</HashLink></li>
-              <li><HashLink smooth to="/#palestras" onClick={closeAll}>WORKSHOPS E OFICINAS</HashLink></li>
-              <li><HashLink smooth to="/#roda" onClick={closeAll}>MENTORIA EM GRUPO</HashLink></li>
+              <li><HashLink smooth to="/consultoria-e-foco" onClick={closeAll}>CONSULTORIA E FOCO</HashLink></li>
+              <li><HashLink smooth to="/formacoes-e-cursos" onClick={closeAll}>FORMAÇÕES E CURSOS</HashLink></li>
+              <li><HashLink smooth to="/workshops" onClick={closeAll}>WORKSHOPS E OFICINAS</HashLink></li>
+              <li><HashLink smooth to="/mentoria" onClick={closeAll}>MENTORIA EM GRUPO</HashLink></li>
             </ul>
           </li>
 

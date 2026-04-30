@@ -7,12 +7,13 @@
     justify-content: center;
     margin: 0 auto;
     font-family: "Montserrat", sans-serif;
+    background-color:#f8f7f4;
 }
 
 .containerProposito {
     border-radius: 3rem;
     padding: 2rem;
-    background-color: #fff;
+    background-color: #f8f7f4;
     display: flex;
     flex-direction: row;
     align-items: center;

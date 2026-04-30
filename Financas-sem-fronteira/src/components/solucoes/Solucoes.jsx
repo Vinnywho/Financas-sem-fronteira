@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import styles from "./Solucoes.module.css";
 import consultoria from "../../assets/icons/Consultoria.svg";
 import formacao from "../../assets/icons/Cursos.svg";
@@ -27,35 +28,35 @@ function Servicos() {
 
         <div className={styles.solucoesCards}>
           <div data-aos="fade-up" data-aos-delay="300">
-            <div className={`${styles.solucoesCard} card-1`}>
+            <Link to="/consultoria-e-foco" className={`${styles.solucoesCard} card-1`}>
               <img src={consultoria} className={styles.solucoesImg} alt="" />
               <h3 className={styles.solucoesCardTitulo}>CONSULTORIA E FOCO</h3>
               <p>Oferecemos consultoria personalizada para impulsionar sua saúde financeira.</p>
-            </div>
+            </Link>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="500">
-            <div className={`${styles.solucoesCard} card-2`}>
+            <Link to="/formacoes-e-cursos" className={`${styles.solucoesCard} card-2`}>
               <img src={formacao} className={styles.solucoesImg} alt="" />
               <h3 className={styles.solucoesCardTitulo}>FORMAÇÕES E CURSOS</h3>
               <p>Desenvolvemos cursos e formações personalizadas para fortalecer sua base financeira.</p>
-            </div>
+            </Link>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="700">
-            <div className={`${styles.solucoesCard} card-3`}>
+            <Link to="/workshops" className={`${styles.solucoesCard} card-3`}>
               <img src={workshop} className={styles.solucoesImg} alt="" />
               <h3 className={styles.solucoesCardTitulo}>WORKSHOPS E OFICINAS</h3>
               <p>Oferecemos workshops e oficinas práticas para aprimorar suas habilidades financeiras.</p>
-            </div>
+            </Link>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="900">
-            <div className={`${styles.solucoesCard} card-4`}>
+            <Link to="/mentoria" className={`${styles.solucoesCard} card-4`}>
               <img src={mentoria} className={styles.solucoesImg} alt="" />
               <h3 className={styles.solucoesCardTitulo}>MENTORIA EM GRUPO</h3>
               <p>Oferecemos mentoria em grupo para fortalecer sua jornada financeira com apoio coletivo.</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

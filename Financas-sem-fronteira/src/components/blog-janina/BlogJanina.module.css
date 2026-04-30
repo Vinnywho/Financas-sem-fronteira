@@ -6,13 +6,13 @@
   justify-content: center;
   align-items: flex-start;
   padding: 120px 0 50px 0;
-  background-color: #ffffff;
+  background-color: #f8f7f4;
 }
 
 .blog-container {
   border-radius: 3rem;
   padding: 2rem;
-  background-color: #fff;
+  background-color: #f8f7f4;
   display: flex;
   flex-direction: column;
   gap: 3rem;

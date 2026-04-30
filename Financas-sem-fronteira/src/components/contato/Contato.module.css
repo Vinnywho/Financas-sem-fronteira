@@ -2,7 +2,7 @@
 .contato {
   display: flex;
   padding: 4rem 0;
-  background-color: #ffffff94;
+  background-color: #f8f7f4;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -11,7 +11,7 @@
   margin-top: -70px;
   border-radius: 3rem;
   padding: 2rem;
-  background-color: #fff;
+  background-color: #f8f7f4;
   display: flex;
   flex-direction: row;
   align-items: center;
