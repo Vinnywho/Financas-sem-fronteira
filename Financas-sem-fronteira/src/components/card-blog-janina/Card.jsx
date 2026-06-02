@@ -19,9 +19,9 @@ function Card({ id, title, desc, bgImage, tipo, data }) {
       <div className={styles["projeto-principal"]} onClick={() => navigate(`/blog/post/${id}`)}>
         <img src={bgImage} alt={title} />
         <div className={styles["projeto-principal-texto"]}>
-          <span>{tipo.join(", ")}</span>
+          <span>{Array.isArray(tipo) ? tipo.join(", ") : tipo}</span>
           <h3>{title}</h3>
-          <p>{data}</p>
+          <p>{data || new Date().toLocaleDateString('pt-BR')}</p>
           <div 
             className={styles.descContainer}
             dangerouslySetInnerHTML={{ __html: desc }} 

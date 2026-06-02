@@ -1,23 +1,27 @@
 import React from "react";
 import styles from "./Blog.module.css";
+import { useNavigate } from "react-router-dom";
 import aos from "aos";
 import "aos/dist/aos.css";
 
-function ProjectCard({ title, desc, bgImage, tipo, autor, autorImg, data }) {
+function ProjectCard({id, title, desc, bgImage, tipo, autor, autorImg, data }) {
+  const navigate = useNavigate();
   React.useEffect(() => {
     aos.init({ duration: 1000, once: true });
   }, []);
 
   return (
     <div data-aos="fade-up" data-aos-delay="100">
-      <div className={styles["blog-card"]}>
+      <div className={styles["blog-card"]} onClick={() => navigate(`/blog/post/${id}`)}>
         <img src={bgImage} alt={title} />
-        {/* Verifica se tipo é array para dar join, senão exibe direto */}
         <span className={styles.tipo}>
           {Array.isArray(tipo) ? tipo.join(", ") : tipo}
         </span>
         <h3>{title}</h3>
-        <p>{desc}</p>
+        <div 
+          className={styles["blog-card-desc"]}
+          dangerouslySetInnerHTML={{ __html: desc }} 
+        />
 
         <div className={styles.autor}>
           <img src={autorImg} alt={autor} />
