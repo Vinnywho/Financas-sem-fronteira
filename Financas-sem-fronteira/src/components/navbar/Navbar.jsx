@@ -54,9 +54,9 @@ const Navbar = ({ isOtherPage }) => {
             onMouseLeave={() => window.innerWidth > 1024 && setShowDropdown(false)}
             onClick={toggleDropdown}
           >
-            <HashLink smooth to="/#solucoes" className={styles.navItem}>
+            <span className={styles.navItem}>
               SOLUÇÕES <span className={`${styles.caret} ${showDropdown ? styles.rotate : ""}`}>▾</span>
-            </HashLink>
+            </span>
             
             <ul className={`${styles.dropdownMenu} ${showDropdown ? styles.show : ""}`}>
               <li><HashLink smooth to="/consultoria-e-foco" onClick={closeAll}>CONSULTORIA E FOCO</HashLink></li>
@@ -77,12 +77,26 @@ const Navbar = ({ isOtherPage }) => {
               SOBRE NÓS
             </Link>
           </li>
+
+          <li>
+            <HashLink smooth to="/#contato" className={styles.navItem} onClick={closeAll}>
+              CONTATO
+            </HashLink>
+          </li>
+
+          <li className={styles.mobileActionItem}>
+            <HashLink smooth to="/login" onClick={closeAll}>
+              <button className={styles.loginBtn}>
+                LOGIN <span className={styles.seta}>→</span>
+              </button>
+            </HashLink>
+          </li>
         </ul>
 
         <div className={styles.navActions}>
-          <HashLink smooth to="/#contato" onClick={closeAll}>
-            <button className={styles.contatoBtn}>
-              ENTRE EM CONTATO <span className={styles.seta}>→</span>
+          <HashLink smooth to="/login" onClick={closeAll}>
+            <button className={styles.loginBtn}>
+              LOGIN <span className={styles.seta}>→</span>
             </button>
           </HashLink>
         </div>

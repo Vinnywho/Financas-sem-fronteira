@@ -63,6 +63,7 @@
 .projeto-principal-texto p {
     font-size: 17px;
     color: #434343;
+    max-width: 400px;
     text-align: left;
     line-height: 1.6;
     font-family: "Montserrat", sans-serif;
@@ -84,6 +85,27 @@
 .btn-blog-principal:hover {
     background-color: #3F5B5B;
     color: #fff;
+}
+
+.descContainer {
+    font-size: 17px;
+    color: #434343;
+    text-align: left;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.descContainer * {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-weight: normal;
 }
 
 @media (max-width: 1024px) {

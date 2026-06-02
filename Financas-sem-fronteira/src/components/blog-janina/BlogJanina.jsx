@@ -1,32 +1,69 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../card-blog-janina/Card";
 import styles from "./BlogJanina.module.css";
-import { projetosLista } from "../../data/artigos";
 import aos from "aos";
 import "aos/dist/aos.css";
 import Lupa from "../../assets/icons/search.svg";
+import { supabase } from "../../services/supabase";
 
 function BlogJanina() {
   const [busca, setBusca] = useState("");
   const [categoriaAtiva, setCategoriaAtiva] = useState("Todas");
+  const [artigos, setArtigos] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     aos.init({
       duration: 1000,
       once: true,
     });
+    fetchArtigos();
   }, []);
 
-  const categorias = ["Todas", "Dicas", "Investimento", "Carreira", "Economia"];
+  const fetchArtigos = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("posts")
+        .select(
+          "id, titulo, conteudo_html, criado_em, data_postagem, capa_url, categorias",
+        )
+        .order("data_postagem", { ascending: false });
 
-  const listaInvertida = [...projetosLista].reverse();
+      if (error) throw error;
 
-  const artigosFiltrados = listaInvertida.filter((artigo) => {
-    const matchesBusca = 
+      const artigosMapeados = data.map((artigo) => {
+        const dataExibicao = artigo.data_postagem
+          ? new Date(artigo.data_postagem + "T00:00:00")
+          : new Date(artigo.criado_em);
+
+        return {
+          id: artigo.id,
+          title: artigo.titulo,
+          desc: artigo.conteudo_html,
+          bgImage:
+            artigo.capa_url ||
+            "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600",
+          tipo:
+            artigo.categorias && artigo.categorias.length > 0
+              ? artigo.categorias
+              : ["Dicas"],
+          data: dataExibicao.toLocaleDateString("pt-BR"),
+        };
+      });
+
+      setArtigos(artigosMapeados);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const categories = ["Todas", "Dicas", "Investimento", "Carreira", "Economia"];
+
+  const artigosFiltrados = artigos.filter((artigo) => {
+    const matchesBusca =
       artigo.title.toLowerCase().includes(busca.toLowerCase()) ||
       artigo.desc.toLowerCase().includes(busca.toLowerCase());
-    
-    const matchesCategoria = 
+
+    const matchesCategoria =
       categoriaAtiva === "Todas" || artigo.tipo.includes(categoriaAtiva);
 
     return matchesBusca && matchesCategoria;
@@ -55,8 +92,12 @@ function BlogJanina() {
           </div>
         </div>
 
-        <div className={styles["categorias"]} data-aos="zoom-in" data-aos-delay="500">
-          {categorias.map((cat) => (
+        <div
+          className={styles["categorias"]}
+          data-aos="zoom-in"
+          data-aos-delay="500"
+        >
+          {categories.map((cat) => (
             <button
               key={cat}
               className={`${styles["categoria-btn"]} ${categoriaAtiva === cat ? styles.active : ""}`}
@@ -66,21 +107,18 @@ function BlogJanina() {
             </button>
           ))}
         </div>
-        
-        {artigosFiltrados.length > 0 ? (
-          artigosFiltrados.map((artigo, index) => (
-            <Card 
-              key={index}
-              title={artigo.title}
-              desc={artigo.desc}
-              bgImage={artigo.bgImage}
-              tipo={artigo.tipo}
-              data={artigo.data}
-            />
-          ))
-        ) : (
-          <p className={styles.noResults}>Nenhum artigo encontrado.</p>
-        )}
+
+        {artigosFiltrados.map((artigo) => (
+          <Card
+            key={artigo.id}
+            id={artigo.id}
+            title={artigo.title}
+            desc={artigo.desc}
+            bgImage={artigo.bgImage}
+            tipo={artigo.tipo}
+            data={artigo.data}
+          />
+        ))}
       </div>
     </div>
   );

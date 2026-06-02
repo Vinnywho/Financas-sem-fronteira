@@ -3,12 +3,14 @@
 .home {
   position: relative;
   width: 100%;
-  height: 900px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: #3F5B5B;
+  padding: 120px 0 80px 0;
+  box-sizing: border-box;
 }
 
 .backgroundContainer {
@@ -26,28 +28,29 @@
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 1400px;
-  padding: 0 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  gap: 20px;
 }
 
 .infos {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   text-align: left;
-  margin-right: 100px;
-  margin-top: 50px;
+  flex: 1;
 }
 
 .infos h1 {
   color: #ffffff;
-  font-size: 80px;
+  font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: 900;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-family: "Montserrat", sans-serif;
-  line-height: 1.0;
+  line-height: 1.1;
 }
 
 .destaque {
@@ -57,17 +60,18 @@
 
 .infos p {
   color: #ffffff;
-  font-size: 20px;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 100;
   margin-bottom: 30px;
   max-width: 600px;
   font-family: "Montserrat", sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
   letter-spacing: .3px;
 }
 
 .botoesHome {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
 }
@@ -108,9 +112,21 @@
   color: #ffffff;
 }
 
+.janinaWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 550px;
+  margin-right: 20px;
+}
+
 .janina {
   height: auto;
-  width: 550px;
+  width: 100%;
+  max-width: 550px;
+  margin-top:-90px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -118,41 +134,38 @@
   transform: scale(1.05);
 }
 
-.janinaWrapper {
-  position: relative;
-  display: inline-block;
-}
-
 .card {
   position: absolute;
   background: #ffffff49;
   backdrop-filter: blur(6px);
   border-radius: 1rem;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 250px;
+  width: 220px;
   animation: flutuar 3s ease-in-out infinite;
   z-index: 10;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .flexContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .frase {
-  font-size: 18px; 
+  font-size: 16px; 
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   color: #ffffff; 
   margin: 0; 
 }
 
-.cardPos1 { top: 150px; left: -65px; animation-delay: 0s; }
-.cardPos2 { top: 400px; right: -100px; animation-delay: 1s; }
-.cardPos3 { bottom: 20px; left: 0px; animation-delay: 2s; }
+.cardPos1 { top: 10%; left: -10%; animation-delay: 0s; }
+.cardPos2 { top: 45%; right: -15%; animation-delay: 1s; }
+.cardPos3 { bottom: 5%; left: -5%; animation-delay: 2s; }
 
 @keyframes flutuar {
   0%, 100% { transform: translateY(0); }
@@ -163,52 +176,110 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 1;
-  animation: flutuar 3s ease-in-out infinite;
+  opacity: 0.6;
 }
 
 .circulo1 {
-  width: 900px;
-  height: 900px;
+  width: 60vw;
+  height: 60vw;
   background: radial-gradient(circle, #183636, transparent);
-  top: -450px; 
-  left: -200px; 
+  top: -20vw; 
+  left: -20vw; 
 }
 
 .circulo2 {
-  width: 900px;
-  height: 900px;
+  width: 60vw;
+  height: 60vw;
   background: radial-gradient(circle, #183636, transparent);
-  bottom: -450px;
-  right: -250px;
+  bottom: -20vw;
+  right: -20vw;
 }
 
-@media (max-width: 1024px) {
+
+@media (max-width: 1400px){
+  .janinaWrapper{
+    margin-right: 20px;
+  }
+  .janina{
+    max-width: 350px;
+  }
+  .card{
+    width: 180px;
+    padding: 15px;
+  }
+  .frase{
+    font-size: 12px;
+  }
+  .cardPos1 { left: -5%; }
+  .cardPos2 { right: -5%; }
+  .cardPos3 { left: 0; }
+}
+
+@media (max-width: 992px) {
   .home {
-    height: auto;
-    padding: 100px 0;
+    padding: 140px 0 60px 0;
   }
+  
   .homeContainer {
-    top: 70px;
     flex-direction: column;
-    padding: 0 20px;
+    text-align: center;
+    gap: 40px;
   }
+  
   .infos {
-    margin-right: 0;
-    margin-top: 0;
     align-items: center;
     text-align: center;
   }
-  .infos p {
-    font-size: 18px;
-  }
+  
   .infos h1 {
-    font-size: 40px;
+    margin-bottom: 20px;
   }
+  
+  .infos p {
+    font-size: 16px;
+  }
+  
+  .botoesHome {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .janinaWrapper {
+    max-width: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    overflow: visible;
+  }
+
   .janina {
-    width: 300px;
+    max-width: 340px;
   }
+
+  .cardsCarousel {
+    display: none;
+  }
+
+  .cardsCarousel::-webkit-scrollbar {
+    display: none;
+  }
+
   .card {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .botoesHome {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .consultoriaBtn, .planosBtn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
   }
 }

@@ -9,6 +9,10 @@ import Formaçoesecursos from "../pages/Solucoes/Formaçoesecursos.jsx";
 import Workshops from "../pages/Solucoes/Workshops.jsx";
 import Mentoria from "../pages/Solucoes/Mentoria.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
+import Login from "../pages/login/Login.jsx";
+import BlogAdmin from "../pages/blog-write/BlogWrite.jsx";
+import PostDetail from "../pages/post-detail/PostDetail.jsx";
+import ProtectedRoute from "../components/ProtectedRoute.jsx";
 
 function Rotas() {
   return (
@@ -23,6 +27,16 @@ function Rotas() {
           <Route path="/formacoes-e-cursos" element={<Formaçoesecursos />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/mentoria" element={<Mentoria />} />
+          <Route path="/login" element={<Login />} />
+          <Route 
+            path="/blog-admin" 
+            element={
+              <ProtectedRoute>
+                <BlogAdmin />
+              </ProtectedRoute>
+            } 
+          />
+          <Route path="/blog/post/:id" element={<PostDetail />} />
         </Routes>
       </Router> 
     </div>

@@ -54,15 +54,17 @@ const ScrollStack = ({
 
     const viewportHeight = window.innerHeight;
     const stackPositionPx = (parseFloat(stackPosition) / 100) * viewportHeight;
-    const containerBottom = containerInfo.current.top + containerInfo.current.height;
-    const endPoint = containerBottom - viewportHeight;
+    
+    const totalCards = cardsRef.current.length;
+    const lastCardOriginalTop = cardOffsets.current[totalCards - 1];
+    const endPoint = lastCardOriginalTop - stackPositionPx - itemStackDistance * (totalCards - 1);
 
     cardsRef.current.forEach((card, i) => {
       if (!card) return;
 
       const originalTop = cardOffsets.current[i];
       const pinStart = originalTop - stackPositionPx - itemStackDistance * i;
-      const pinEnd = Math.max(pinStart, endPoint + itemStackDistance * i);
+      const pinEnd = endPoint + itemStackDistance * i;
 
       let translateY = 0;
       let scale = 1;

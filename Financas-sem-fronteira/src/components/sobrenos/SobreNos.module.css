@@ -103,6 +103,13 @@
   margin: 0;
 }
 
+.stackSection {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .cardContent {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -179,7 +186,7 @@
 .extraContent {
   width: 100%;
   max-width: 900px;
-  margin: -180px auto 0;
+  margin: 4rem auto 0;
   position: relative;
   z-index: 20;
 }
@@ -233,11 +240,13 @@
   margin-top: 0.55em;
 }
 
-
-
 @media (max-width: 768px) {
   .sobre-nos {
     padding: 70px 0 40px;
+  }
+
+  .stackSection {
+    min-height: auto;
   }
 
   .cardContent {
@@ -265,7 +274,7 @@
   }
 
   .extraContent {
-    margin-top: -120px;
+    margin-top: 2.5rem;
   }
 
   .extraInner {

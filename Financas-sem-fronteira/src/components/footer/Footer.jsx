@@ -14,7 +14,7 @@ const links = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/vinicius-cardoso-de-lima-a9a918227/",
+    href: "https://www.linkedin.com/company/financas-sem-fronteira/",
     external: true,
   },
   {

@@ -1,0 +1,225 @@
+.adminWrapper {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #183636;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbarContainer {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffffd1;
+}
+
+.logoutButton {
+  padding: 6px 16px;
+  background-color: transparent;
+  color: #ffffffd1;
+  border: 1px solid #ffffffd1;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.logoutButton:hover {
+  background-color: #ffffffd1;
+  color: #183636;
+}
+
+.container {
+  max-width: 850px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.pageTitle {
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.createButton {
+  padding: 10px 20px;
+  background-color: #183636;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.listGrid {
+  display: grid;
+  gap: 15px;
+}
+
+.postCard {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postTitle {
+  margin: 0 0 5px 0;
+  color: #1e293b;
+}
+
+.postDate {
+  color: #64748b;
+}
+
+.actionGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton {
+  padding: 6px 12px;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  padding: 6px 12px;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #991b1b;
+}
+
+.cancelButton {
+  padding: 6px 12px;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #991b1b;
+}
+
+.spacer {
+  width: 88px;
+}
+
+.fieldLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.textInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.fileInput {
+  margin-bottom: 10px;
+}
+
+.coverPreview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.categoriesGroup {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.categoryLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.saveButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #183636d1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+
+.bubblemenu {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.7rem;
+  display: flex;
+  padding: 0.2rem;
+  gap: 4px;
+}
+
+#bold, #italic, #strike, #subtitle{
+  background-color: unset;
+  border: none;
+  padding: 6px 10px;
+  color: #ccc;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+#bold, #italic, #strike, #subtitle button:hover {
+  background-color: #ccc;
+}
+
+#bold, #italic, #strike, #subtitle button.is-active {
+  background-color: #183636;
+  color: #fff;
+}
+
+#bold, #italic, #strike, #subtitle button.is-active:hover {
+  background-color: #0f172a;
+}

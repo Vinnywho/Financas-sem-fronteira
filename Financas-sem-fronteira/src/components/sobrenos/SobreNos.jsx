@@ -57,25 +57,27 @@ function SobreNos() {
           </p>
         </div>
 
-        <ScrollStack itemStackDistance={35} stackPosition="15%" baseScale={0.94}>
-          {cards.map(({ icon, alt, label, title, text }) => (
-            <ScrollStackItem key={title}>
-              <div className={styles.cardContent}>
-                <div className={styles.cardHeader}>
-                  <span className={styles.cardLabel}>{label}</span>
-                  <div className={styles.cardIconWrap}>
-                    <img src={icon} alt={alt} className={styles.cardIcon} />
+        <div className={styles.stackSection}>
+          <ScrollStack itemStackDistance={35} stackPosition="15%" baseScale={0.94}>
+            {cards.map(({ icon, alt, label, title, text }) => (
+              <ScrollStackItem key={title}>
+                <div className={styles.cardContent}>
+                  <div className={styles.cardHeader}>
+                    <span className={styles.cardLabel}>{label}</span>
+                    <div className={styles.cardIconWrap}>
+                      <img src={icon} alt={alt} className={styles.cardIcon} />
+                    </div>
+                  </div>
+                  <div className={styles.cardBody}>
+                    <h2 className={styles.cardTitle}>{title}</h2>
+                    <div className={styles.cardLine} aria-hidden="true" />
+                    <p className={styles.cardText}>{text}</p>
                   </div>
                 </div>
-                <div className={styles.cardBody}>
-                  <h2 className={styles.cardTitle}>{title}</h2>
-                  <div className={styles.cardLine} aria-hidden="true" />
-                  <p className={styles.cardText}>{text}</p>
-                </div>
-              </div>
-            </ScrollStackItem>
-          ))}
-        </ScrollStack>
+              </ScrollStackItem>
+            ))}
+          </ScrollStack>
+        </div>
 
         <div className={styles.extraContent}>
           <div className={styles.extraInner}>
@@ -101,7 +103,7 @@ function SobreNos() {
             <ul className={styles.listaPropostas}>
               <li>
                 <span className={styles.listaBullet} aria-hidden="true" />
-                Mudar os paradigmas de como as pessoas lidam com seus recursos
+                Mudar os paradigmas de como as pessoas lidam with seus recursos
                 financeiros nos diferentes momentos da vida;
               </li>
               <li>
