@@ -15,11 +15,13 @@ O <b>Finanças sem Fronteira</b> é uma plataforma web de Educação Financeira 
 src/
 ├── assets/
 │   └── images/
-│       ├── Janina.png
-│       └── consul-financeira-480x480.webp
+│       ├── fonts/
+│       ├── images/  
+│       └── icons/
 ├── components/
 │   ├── blog-janina/
 │   ├── blog-outro/
+│   ├── blog-write/
 │   ├── cartao-blog-janina/
 │   ├── contato/
 │   ├── footer/
@@ -29,15 +31,15 @@ src/
 │   ├── scrollstack/
 │   ├── sobrenos/
 │   ├── solucao-page/
-│   │   ├── Solucao.jsx[cite: 3]
-│   │   └── Solucao.module.css[cite: 6]
 │   ├── solucoes/
+│   ├── ProtectedRoute.jsx
 │   └── ScrollToTop.jsx
 ├── data/
 ├── pages/
 │   └── consultoria-e-foco/
 │       └── Consultoriaefoco.jsx[cite: 5]
 ├── routes/
+├── services/
 ├── App.css
 ├── App.jsx
 └── main.jsx
