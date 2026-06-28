@@ -7,10 +7,11 @@ import imagem from "../../assets/images/palestras-e-treinamentos-1-480x480.webp"
 
 function Workshops() {
   const data = {
-    titulo: "Workshops e oficinas",
+    titulo: " Roda de conversa, Workshops e oficinas",
     textoprimario:
-      "A roda de conversa é uma nobre e efetiva contribuição da Educação Financeira Comportamental.",
-    textosecundario: `A roda de conversa tem como finalidade proporcionar, em um ambiente seguro e intimista, o acolhimento à fala de cada participante contribuindo efetivamente com seu depoimento, sua história e sua opinião dentro do contexto de finanças, mediado pela educadora financeira. Todos falam e todos escutam.`,
+      "Rodas de conversa, workshops e oficinas são experiências desenvolvidas para promover a Educação Financeira Comportamental de forma prática, participativa e acolhedora.",
+    textosecundario: `Criamos um ambiente seguro e acolhedor para que cada participante possa refletir, compartilhar experiências e aprender sem julgamentos. Com mediação especializada, promovemos diálogos respeitosos que valorizam diferentes perspectivas e fortalecem a construção de uma relação mais consciente com o dinheiro. 
+    Acreditamos que a verdadeira transformação acontece quando as pessoas se sentem ouvidas, respeitadas e protagonistas da própria história.`,
     imagem: imagem,
   };
   return (

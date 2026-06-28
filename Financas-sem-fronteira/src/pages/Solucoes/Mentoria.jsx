@@ -7,10 +7,10 @@ import imagem from "../../assets/images/rodadeconversa-1-480x480.webp";
 
 function Mentoria() {
   const data = {
-    titulo: "Mentoria em grupo",
+    titulo: "Outras atividades",
     textoprimario:
-      "Atividades voltadas às empresas, Instituições, Órgãos Públicos, Associações, Sindicatos, ONGs, Grupos Comunitários e afins.",
-    textosecundario: `Palestras e oficinas personalizadas favorecem acolhimento diverso no qual cada ouvinte se sente integrado ao ambiente em que está inserido. O trabalho é desenvolvido, direcionado e ministrado às necessidades de seus colaboradores, funcionários e parceiros. O bem estar financeiro contribui para o aumento da produtividade e a valorização da atividade profissional desenvolvida.`,
+      "Nossas palestras, oficinas e mentorias são desenvolvidas de forma personalizada, considerando as necessidades e objetivos de cada contratante. Não utilizamos conteúdos prontos ou padronizados, pois acreditamos que cada público possui desafios e realidades específicas.",
+    textosecundario: `Por meio da Educação Financeira Comportamental, promovemos conhecimento, bem-estar financeiro e maior qualidade de vida para colaboradores, parceiros e equipes. Mais do que um custo, esse trabalho representa um investimento que contribui para o aumento da produtividade, do engajamento e da valorização profissional.`,
     imagem: imagem,
   };
   return (

@@ -25,6 +25,7 @@ function Blog() {
       const { data, error } = await supabase
         .from('posts')
         .select('id, titulo, conteudo_html, criado_em, data_postagem, capa_url, categorias')
+        .eq('publicado', true)
         .order('data_postagem', { ascending: false });
 
       if (error) throw error;
@@ -38,7 +39,7 @@ function Blog() {
           id: artigo.id,
           title: artigo.titulo,
           desc: artigo.conteudo_html,
-          bgImage: artigo.capa_url || "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600",
+          bgImage: artigo.capa_url,
           tipo: artigo.categorias && artigo.categorias.length > 0 ? artigo.categorias : ["Dicas"],
           data: dataExibicao.toLocaleDateString("pt-BR"),
         };

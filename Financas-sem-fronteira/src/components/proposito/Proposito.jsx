@@ -8,11 +8,12 @@ import "aos/dist/aos.css";
 
 function FinancialHealth() {
   React.useEffect(() => {
-      aos.init({ duration: 1000,
-        once: true
-      });
-      
-    }, []);
+    aos.init({
+      duration: 1000,
+      once: true
+    });
+
+  }, []);
 
   return (
     <section className={styles.proposito} id="proposito">
@@ -47,20 +48,20 @@ function FinancialHealth() {
         <div className={styles.descricaoProposito} data-aos="fade-left" data-aos-delay="300">
           <header>
             <h1 className={styles.title}>
-              Sua Saúde Financeira: <span>O Nosso Propósito</span>
+              Sua transformação financeira <span>começa pelo comportamento</span>
             </h1>
           </header>
           <p>
-            A falta de conhecimento financeiro é o maior obstáculo para o
-            crescimento. Nossa missão é democratizar o acesso à inteligência de
-            dados, capacitando indivíduos e empresas a tomarem decisões
-            financeiras informadas, alcançando estabilidade e prosperidade.{" "}
+            Acreditamos que uma vida financeira equilibrada começa pela forma como
+            pensamos, sentimos e tomamos decisões sobre o dinheiro. Por isso, unimos
+            Educação Financeira Comportamental, neurociência e uma abordagem
+            acolhedora para promover mudanças reais, conscientes e duradouras.{" "}
             <br></br>
             Nosso compromisso gira em torno de três pilares fundamentais:
           </p>
 
           <div className={styles.featuresGrid}>
-            {["Transparência", "Agilidade", "Resultados"].map((text, i) => (
+            {["Comportamento", "Conhecimento", "Autonomia"].map((text, i) => (
               <div key={i} className={styles.featureItem}>
                 <div className={styles.iconBox}>
                   {i === 0 && <img src={olho} alt="Olho" />}

@@ -18,17 +18,17 @@ function Home() {
 
       <section className={styles.homeContainer}>
         <div className={styles.infos}>
-          <h1 data-aos="fade-right">
-            CONSTRUA SEU <span className={styles.destaque}>LEGADO</span>{" "}
-            FINANCEIRO
+          <h1 data-aos="fade-right" className={styles.titulo}>
+            EDUCAÇÃO FINANCEIRA QUE <span className={styles.destaque}>TRANSFORMA</span>{" "}
+            COMPORTAMENTOS.
           </h1>
           <p data-aos="fade-right" data-aos-delay="100">
-            <span className={styles.destaque}>FINANÇAS SEM FRONTEIRA</span> é
-            uma empresa voltada para educação financeira comportamental e tem
-            como objetivo enriquecer a relação das pessoas com o dinheiro. Nosso
-            propósito é disseminar a educação financeira comportamental
-            oferecendo um tratamento multidisciplinar, com o intuito de ver o
-            ser humano como biopsicossocioespiritual.
+            A <span className={styles.destaque}>FINANÇAS SEM FRONTEIRA </span>
+            é especializada em Educação Financeira
+            Comportamental. Como agentes de transformação, auxiliamos as pessoas na sua
+            relação com o dinheiro por meio de uma abordagem acolhedora, personalizada e
+            fundamentada na neurociência, considerando o ser humano em sua totalidade
+            para promover escolhas mais conscientes, autonomia e qualidade de vida.
           </p>
           <div
             className={styles.botoesHome}

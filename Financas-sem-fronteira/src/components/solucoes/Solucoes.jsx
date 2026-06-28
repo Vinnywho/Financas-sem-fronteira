@@ -21,8 +21,8 @@ function Servicos() {
             NOSSAS <span className={styles.destaqueSolucoes}>SOLUÇÕES</span>
           </h2>
           <p className={styles.solucoesDescricao}>
-            Descubra como podemos transformar sua relação com o dinheiro
-            impulsionar sua saúde financeira.
+            Descubra como podemos transformar sua relação com o dinheiro e impulsionar
+            a saúde financeira
           </p>
         </div>
 

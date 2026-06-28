@@ -22,7 +22,7 @@ export default function BlogAdmin() {
     try {
       const { data, error } = await supabase
         .from("posts")
-        .select("id, titulo, conteudo_html, criado_em, data_postagem, capa_url, categorias")
+        .select("id, titulo, conteudo_html, criado_em, data_postagem, capa_url, categorias, publicado")
         .order("data_postagem", { ascending: false });
 
       if (error) throw error;
@@ -69,6 +69,21 @@ export default function BlogAdmin() {
     }
   };
 
+  const handleToggleVisibility = async (id, currentStatus) => {
+    try {
+      const { error } = await supabase
+        .from("posts")
+        .update({ publicado: !currentStatus })
+        .eq("id", id);
+
+      if (error) throw error;
+      fetchPosts();
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao alterar visibilidade");
+    }
+  };
+
   const handleSave = async () => {
     if (!title.trim()) {
       alert("Por favor, digite um título!");
@@ -96,7 +111,7 @@ export default function BlogAdmin() {
         if (error) throw error;
         alert("Post updated!");
       } else {
-        const { error } = await supabase.from("posts").insert([payload]);
+        const { error } = await supabase.from("posts").insert([{ ...payload, publicado: true }]);
 
         if (error) throw error;
         alert("Post criado!");
@@ -179,7 +194,7 @@ export default function BlogAdmin() {
             </div>
             <div className={styles.listGrid}>
               {posts.map((post) => (
-                <div key={post.id} className={styles.postCard}>
+                <div key={post.id} className={`${styles.postCard} ${!post.publicado ? styles.hiddenPost : ""}`}>
                   <div>
                     <h3 className={styles.postTitle}>{post.titulo}</h3>
                     <small className={styles.postDate}>
@@ -188,8 +203,15 @@ export default function BlogAdmin() {
                         : new Date(post.criado_em).toLocaleDateString("pt-BR")
                       }
                     </small>
+                    {!post.publicado && <span className={styles.hiddenBadge}> Oculto</span>}
                   </div>
                   <div className={styles.actionGroup}>
+                    <button
+                      onClick={() => handleToggleVisibility(post.id, post.publicado)}
+                      className={styles.visibilityButton}
+                    >
+                      {post.publicado ? "Ocultar" : "Exibir"}
+                    </button>
                     <button
                       onClick={() => handleEditClick(post)}
                       className={styles.editButton}

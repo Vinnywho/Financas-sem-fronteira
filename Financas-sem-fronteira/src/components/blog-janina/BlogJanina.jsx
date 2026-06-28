@@ -26,6 +26,7 @@ function BlogJanina() {
         .select(
           "id, titulo, conteudo_html, criado_em, data_postagem, capa_url, categorias",
         )
+        .eq("publicado", true)
         .order("data_postagem", { ascending: false });
 
       if (error) throw error;
