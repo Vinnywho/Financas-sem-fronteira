@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import './App.css'
 import Rotas from './routes/Rotas.jsx';
 
 createRoot(document.getElementById('root')).render(

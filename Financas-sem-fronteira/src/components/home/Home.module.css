@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #3F5B5B;
+  background-color: var(--bg-green);
   padding: 120px 0 80px 0;
   box-sizing: border-box;
 }
@@ -45,7 +45,7 @@
 }
 
 .infos h1 {
-  color: #ffffff;
+  color: var(--text-light);
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   margin-bottom: 30px;
@@ -54,12 +54,12 @@
 }
 
 .destaque {
-  color: #D7C36B;
+  color: var(--accent-gold);
   font-weight: 900;
 }
 
 .infos p {
-  color: #ffffff;
+  color: var(--text-light);
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   font-weight: 100;
   margin-bottom: 30px;
@@ -77,8 +77,8 @@
 }
 
 .consultoriaBtn {
-  background-color: #AD894F;
-  color: #fff;
+  background-color: var(--accent-gold-dark);
+  color: var(--text-light);
   border: none;
   border-radius: 3rem;
   padding: 15px 30px;
@@ -86,30 +86,32 @@
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .consultoriaBtn:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--accent-gold-hover);
+  color: var(--bg-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(225, 196, 95, 0.3);
 }
 
 .planosBtn {
-  background-color: #00000052;
-  color: #ffffff;
-  border: #ffffff56 1px solid;
+  background-color: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--border-light);
   border-radius: 3rem;
   padding: 15px 30px;
   font-size: 18px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .planosBtn:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--glass-bg-dark);
+  transform: translateY(-2px);
 }
 
 .janinaWrapper {
@@ -136,12 +138,12 @@
 
 .card {
   position: absolute;
-  background: #ffffff49;
-  backdrop-filter: blur(6px);
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
   border-radius: 1rem;
   padding: 20px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--glass-border);
   width: 220px;
   animation: flutuar 3s ease-in-out infinite;
   z-index: 10;
@@ -159,7 +161,7 @@
   font-size: 16px; 
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
-  color: #ffffff; 
+  color: var(--text-light); 
   margin: 0; 
 }
 
@@ -182,7 +184,7 @@
 .circulo1 {
   width: 60vw;
   height: 60vw;
-  background: radial-gradient(circle, #183636, transparent);
+  background: radial-gradient(circle, var(--bg-green-dark), transparent);
   top: -20vw; 
   left: -20vw; 
 }
@@ -190,7 +192,7 @@
 .circulo2 {
   width: 60vw;
   height: 60vw;
-  background: radial-gradient(circle, #183636, transparent);
+  background: radial-gradient(circle, var(--bg-green-dark), transparent);
   bottom: -20vw;
   right: -20vw;
 }

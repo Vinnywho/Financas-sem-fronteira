@@ -1,8 +1,8 @@
 .footer {
   position: relative;
   width: 100%;
-  background-color: #0e2424;
-  color: #fff;
+  background-color: var(--bg-green-dark);
+  color: var(--text-light);
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
 }
@@ -20,9 +20,9 @@
   height: 100%;
 }
 
-.topBorder span:nth-child(1) { background-color: #1e4d4d; }
-.topBorder span:nth-child(2) { background-color: #2d7272; }
-.topBorder span:nth-child(3) { background-color: #1e4d4d; }
+.topBorder span:nth-child(1) { background-color: var(--bg-green); }
+.topBorder span:nth-child(2) { background-color: var(--accent-gold); }
+.topBorder span:nth-child(3) { background-color: var(--bg-green); }
 
 /* ─── Main inner layout ─────────────────────────────────────── */
 
@@ -48,7 +48,7 @@
   font-size: 1.6rem;
   font-weight: 800;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--text-light);
   letter-spacing: 0.02em;
   margin: 0;
   text-transform: uppercase;
@@ -111,7 +111,7 @@
 }
 
 .navLink:hover {
-  color: #ffffff;
+  color: var(--text-light);
   gap: 0.75rem;
 }
 
@@ -133,7 +133,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid var(--border-light);
   background: transparent;
   color: rgba(255, 255, 255, 0.7);
   display: flex;
@@ -145,7 +145,7 @@
 
 .scrollTop:hover {
   border-color: #4a9494;
-  color: #ffffff;
+  color: var(--text-light);
   background: rgba(74, 148, 148, 0.15);
   transform: translateY(-4px);
 }

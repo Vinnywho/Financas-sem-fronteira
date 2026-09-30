@@ -1,7 +1,88 @@
+:root {
+  /* LIGHT THEME */
+  --bg-primary: #f8f7f4;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #eaf1ef;
+  --lg-btn: #fff;
+  
+  /* Specific Backgrounds */
+  --bg-navy: #072727;
+  --bg-green: #274646;
+  --bg-green-dark: #153030;
+  --bg-green-gradient: linear-gradient(135deg, #1f4140, #294f4d);
+  
+  /* Text */
+  --text-primary: #183636;
+  --text-secondary: #2c3e50;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+  
+  /* Accents */
+  --accent-gold: #e1c45f;
+  --accent-gold-dark: #b9913f;
+  --accent-gold-hover: #ebd17a;
+  
+  /* Borders & UI */
+  --border-color: #3f3f3f2a;
+  --border-light: rgba(255, 255, 255, 0.2);
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.164);
+  --glass-bg-dark: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] {
+  /* DARK THEME */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --bg-tertiary: #1e1e1e;
+  --lg-btn: #fff;
+  
+  /* Specific Backgrounds */
+  --bg-navy: #072727;
+  --bg-green: #173838;
+  --bg-green-dark: #153030;;
+  --bg-green-gradient: linear-gradient(135deg, #0b1717, #142222);
+  
+  /* Text */
+  --text-primary: #eaf1ef;
+  --text-secondary: #c0cfcd;
+  --text-muted: #8a9b99;
+  --text-light: #ffffff;
+  
+  /* Accents */
+  --accent-gold: #e1c45f;
+  --accent-gold-dark: #b9913f;
+  --accent-gold-hover: #ebd17a;
+  
+  /* Borders & UI */
+  --border-color: #3f3f3f80;
+  --border-light: rgba(255, 255, 255, 0.1);
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.6);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.164);
+  --glass-bg-dark: rgba(30, 30, 30, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.05);
+}
+
 html, body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -9,7 +90,6 @@ html, body {
   padding: 0;
   box-sizing: border-box;
 }
-
 
 #home, #solucoes, #blog, #proposito, #contato {
   scroll-margin-top: 150px;

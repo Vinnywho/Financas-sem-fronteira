@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import Contato from "../../components/contato/Contato";
 import Footer from "../../components/footer/Footer";
@@ -110,6 +110,25 @@ function PostDetail() {
       </article>
 
       <hr className={styles.divider} data-aos="fade-up" data-aos-delay="250" />
+
+      <section className={styles.ctaBanner} data-aos="fade-up" data-aos-delay="300">
+        <div className={styles.ctaContent}>
+          <h3 className={styles.ctaTitle}>
+            Se identificou com este conteúdo?
+          </h3>
+          <p className={styles.ctaText}>
+            A Conversa de Reconhecimento é um encontro de 30 minutos para conhecer
+            nossa abordagem, sem julgamento e sem compromisso. Um primeiro passo
+            para quem quer entender melhor sua relação com o dinheiro.
+          </p>
+          <Link
+            to={`/conversa-de-reconhecimento?origem=post&ref=${encodeURIComponent(post?.titulo || "")}`}
+            className={styles.ctaButton}
+          >
+            QUERO CONHECER A CONVERSA DE RECONHECIMENTO →
+          </Link>
+        </div>
+      </section>
 
       <Contato />
       <Footer />

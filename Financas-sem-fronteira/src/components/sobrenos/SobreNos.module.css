@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 100px 0 60px;
-  background-color: #f8f7f4;
+  background-color: var(--bg-primary);
   overflow: hidden;
   margin-top: 80px;
 }
@@ -75,7 +75,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #1e4d4d;
+  background-color: var(--accent-gold);
   opacity: 0.5;
 }
 
@@ -89,7 +89,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1e4d4d;
+  color: var(--text-primary);
   line-height: 1.7;
   margin: 0;
 }
@@ -98,7 +98,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
   font-weight: 400;
-  color: #5a6a6a;
+  color: var(--text-secondary);
   line-height: 1.75;
   margin: 0;
 }
@@ -131,15 +131,15 @@
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #1e4d4d;
-  opacity: 0.45;
+  color: var(--accent-gold-dark);
 }
 
 .cardIconWrap {
   width: 80px;
   height: 80px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #e8f0f0 0%, #d4e6e6 100%);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,7 +162,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #1e4d4d;
+  color: var(--text-primary);
   letter-spacing: 0.06em;
   margin: 0;
 }
@@ -170,7 +170,7 @@
 .cardLine {
   width: 40px;
   height: 3px;
-  background: linear-gradient(90deg, #1e4d4d, #4a9494);
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-dark));
   border-radius: 2px;
 }
 
@@ -178,7 +178,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: #4a5a5a;
+  color: var(--text-secondary);
   margin: 0;
   max-width: 500px;
 }
@@ -192,13 +192,11 @@
 }
 
 .extraInner {
-  background: #ffffff;
+  background: var(--bg-secondary);
   border-radius: 28px;
   padding: 3rem 3.5rem;
-  border: 1px solid rgba(30, 77, 77, 0.08);
-  box-shadow:
-    0 2px 4px rgba(0,0,0,0.03),
-    0 12px 40px rgba(0,0,0,0.07);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -207,7 +205,7 @@
 .extraText {
   font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
-  color: #4a5a5a;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin: 0;
 }
@@ -224,7 +222,7 @@
 .listaPropostas li {
   font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
-  color: #4a5a5a;
+  color: var(--text-secondary);
   line-height: 1.75;
   display: flex;
   align-items: flex-start;
@@ -236,7 +234,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #1e4d4d;
+  background-color: var(--accent-gold);
   margin-top: 0.55em;
 }
 

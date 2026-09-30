@@ -3,7 +3,7 @@
 .blog {
     display: flex;
     padding: 4rem 0;
-    background-color: #f8f7f4;
+    background-color: var(--bg-primary);
     justify-content: center;
     margin: 0 auto;
     font-family: "Montserrat", sans-serif;
@@ -13,7 +13,7 @@
     margin-top: -50px;
     border-radius: 3rem;
     padding: 2rem;
-    background-color: #f8f7f4;
+    background-color: var(--bg-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,14 +25,14 @@
 .blog-container h1 {
     font-size: 60px;
     font-weight: 900;
-    color: #183636;
+    color: var(--text-primary);
 }
 
 .descricao-blog {
     margin-top: -20px;
     margin-bottom: 20px;
     font-size: 18px;
-    color: #AD894F;
+    color: var(--accent-gold-dark);
     text-align: center;
     max-width: 600px;
 }
@@ -65,8 +65,8 @@
 
 .projeto-principal-texto span {
     font-size: 13px;
-    color: #ffffff;
-    background-color: #183636d1;
+    color: var(--text-light);
+    background-color: var(--bg-green-dark);
     font-weight: 600;
     padding: 8px 30px;
     border-radius: 3rem;
@@ -78,20 +78,20 @@
     font-weight: 800;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #183636;
+    color: var(--text-primary);
 }
 
 .projeto-principal-texto p {
     font-size: 18px;
-    color: #434343;
+    color: var(--text-secondary);
     text-align: left;
 }
 
 .btn-blog-principal {
     padding: 10px;
     background-color: transparent;
-    color: #3F5B5B;
-    border: 2px solid #3F5B5B;
+    color: var(--bg-green);
+    border: 2px solid var(--bg-green);
     border-radius: 3rem;
     font-size: 16px;
     cursor: pointer;
@@ -100,8 +100,8 @@
 }
 
 .btn-blog-principal:hover {
-    background-color: #3F5B5B;
-    color: #fff;
+    background-color: var(--bg-green);
+    color: var(--text-light);
 }
 
 .grid-blog {
@@ -116,10 +116,10 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background: #fff;
+    background: var(--bg-secondary);
     border-radius: 2rem;
     padding: 25px;
-    border: #e6e5e5 solid 1px;
+    border: 1px solid var(--border-color);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-decoration: none;
     cursor: pointer;
@@ -143,12 +143,12 @@
     text-transform: uppercase;
     font-weight: 900;
     margin: 0;
-    color: #183636;
+    color: var(--text-primary);
 }
 
 .blog-card-desc {
     font-size: 14px;
-    color: #000;
+    color: var(--text-secondary);
     opacity: 0.9;
     margin: 0;
     display: -webkit-box;
@@ -159,8 +159,8 @@
 }
 
 .tipo {
-    background-color: #183636d1;
-    color: #fff;
+    background-color: var(--bg-green-dark);
+    color: var(--text-light);
     padding: 5px 15px;
     font-size: 12px;
     font-weight: 400;
@@ -177,8 +177,8 @@
     padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
-    color: #183636;
-    border: 2px solid #183636;
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
     background-color: transparent;
     border-radius: 3rem;
     cursor: pointer;
@@ -186,8 +186,8 @@
 }
 
 .btn-blog-todos:hover {
-    background-color: #183636;
-    color: #ffffff;
+    background-color: var(--text-primary);
+    color: var(--text-light);
 }
 
 .autor {
@@ -206,7 +206,7 @@
 .autor-nome {
     font-size: 14px;
     font-weight: bold;
-    color: #183636;
+    color: var(--text-primary);
 }
 
 .autor img {

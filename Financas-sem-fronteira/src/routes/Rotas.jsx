@@ -13,12 +13,15 @@ import Login from "../pages/login/Login.jsx";
 import BlogAdmin from "../pages/blog-write/BlogWrite.jsx";
 import PostDetail from "../pages/post-detail/PostDetail.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
+import ConversaReconhecimento from "../pages/ConversaReconhecimento/ConversaReconhecimento.jsx";
+import WhatsAppButton from "../components/whatsapp-button/WhatsAppButton.jsx";
 
 function Rotas() {
   return (
     <div>
       <Router>
         <ScrollToTop />
+        <WhatsAppButton />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/blog-janina" element={<BlogJanina />} />
@@ -27,6 +30,7 @@ function Rotas() {
           <Route path="/formacoes-e-cursos" element={<Formaçoesecursos />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/mentoria" element={<Mentoria />} />
+          <Route path="/conversa-de-reconhecimento" element={<ConversaReconhecimento />} />
           <Route path="/login" element={<Login />} />
           <Route 
             path="/blog-admin" 

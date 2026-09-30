@@ -2,7 +2,7 @@
 .contato {
   display: flex;
   padding: 4rem 0;
-  background-color: #f8f7f4;
+  background-color: var(--bg-primary);
   justify-content: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -11,7 +11,7 @@
   margin-top: -70px;
   border-radius: 3rem;
   padding: 2rem;
-  background-color: #f8f7f4;
+  background-color: var(--bg-primary);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,7 +30,7 @@
 
 .descricaoContato p {
   font-size: 18px;
-  color: #434343;
+  color: var(--text-secondary);
   text-align: left;
 }
 
@@ -42,7 +42,7 @@
 .title {
   font-size: 60px;
   font-weight: 900;
-  color: #183636;
+  color: var(--text-primary);
 }
 
 .form {
@@ -54,36 +54,42 @@
 
 .input, .textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   border-radius: 0.5rem;
   font-size: 16px;
   width: 100%;
   box-sizing: border-box;
 }
 
+.input::placeholder, .textarea::placeholder {
+  color: var(--text-muted);
+}
+
 .button {
   padding: 0.75rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #183636;
-  color: #fff;
+  background-color: var(--bg-green-dark);
+  color: var(--text-light);
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: #3F5B5B;
+  background-color: var(--bg-green);
 }
 
 .successMsg {
   text-align: center;
   padding: 3rem 2rem;
   font-size: 1.25rem;
-  color: #183636;
-  border: 2px solid #183636;
+  color: var(--text-primary);
+  border: 2px solid var(--bg-green-dark);
   border-radius: 1rem;
-  background-color: #f8fcfc;
+  background-color: var(--bg-tertiary);
   margin: 0 auto;
   max-width: 600px;
 }

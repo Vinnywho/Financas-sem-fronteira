@@ -1,7 +1,7 @@
 .pageWrapper {
   width: 100%;
   min-height: 100vh;
-  background-color: #f8f7f4;
+  background-color: var(--bg-primary);
   margin-top: 30px;
 }
 
@@ -17,8 +17,8 @@
   align-self: flex-start;
   padding: 10px 20px;
   background-color: transparent;
-  color: #3F5B5B;
-  border: 1px solid #3F5B5B;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 3rem;
   font-size: 14px;
   cursor: pointer;
@@ -29,8 +29,9 @@
 }
 
 .backButton:hover {
-  background-color: #3F5B5B;
-  color: #fff;
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
 }
 
 .coverWrapper {
@@ -39,7 +40,7 @@
   border-radius: 2.5rem;
   overflow: hidden;
   margin-bottom: 40px;
-  border: 1px solid #3f3f3f4f;
+  border: 1px solid var(--border-color);
 }
 
 .coverImage {
@@ -64,17 +65,18 @@
 
 .categoryBadge {
   font-size: 12px;
-  color: #ffffff;
-  background-color: #183636d1;
+  color: var(--text-light);
+  background-color: var(--bg-green-dark);
   font-weight: 600;
   padding: 6px 18px;
   border-radius: 3rem;
   font-family: "Montserrat", sans-serif;
+  border: 1px solid var(--border-color);
 }
 
 .date {
   font-size: 15px;
-  color: #64748b;
+  color: var(--text-muted);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -82,7 +84,7 @@
   font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
-  color: #183636;
+  color: var(--text-primary);
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 24px;
@@ -94,13 +96,13 @@
 .divider {
   width: 100%;
   border: 0;
-  border-top: 1px solid #3f3f3f2a;
+  border-top: 1px solid var(--border-color);
   margin-bottom: 40px;
 }
 
 .htmlContent {
   font-size: 18px;
-  color: #2c3e50;
+  color: var(--text-secondary);
   line-height: 1.8;
   font-family: "Montserrat", sans-serif;
   white-space: pre-wrap;
@@ -115,7 +117,7 @@
 
 .htmlContent h1 {
   font-size: 32px;
-  color: #183636;
+  color: var(--text-primary);
   margin: 40px 0 20px 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -124,7 +126,7 @@
 
 .htmlContent h2 {
   font-size: 26px;
-  color: #183636;
+  color: var(--text-primary);
   margin: 32px 0 16px 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -145,13 +147,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f7f4;
+  background-color: var(--bg-primary);
 }
 
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #3F5B5B;
+  border: 5px solid var(--accent-gold);
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
@@ -173,5 +175,72 @@
   }
   .title {
     font-size: 32px;
+  }
+}
+
+/* CTA Banner - Conversa de Reconhecimento */
+.ctaBanner {
+  max-width: 1400px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+
+.ctaContent {
+  background: var(--bg-green-gradient);
+  border-radius: 2rem;
+  padding: 48px 40px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.ctaTitle {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--accent-gold);
+}
+
+.ctaText {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0.92;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: var(--accent-gold);
+  color: var(--bg-green-dark);
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 3rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--accent-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(225, 196, 95, 0.3);
+}
+
+@media (max-width: 768px) {
+  .ctaContent {
+    padding: 36px 24px;
+  }
+  .ctaTitle {
+    font-size: 22px;
+  }
+  .ctaText {
+    font-size: 15px;
+  }
+  .ctaButton {
+    font-size: 14px;
+    padding: 14px 24px;
   }
 }

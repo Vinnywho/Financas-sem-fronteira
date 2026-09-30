@@ -9,10 +9,10 @@
     flex-direction: row;
     align-items: center;
     gap: 3rem;
-    border: 1px solid #3f3f3f4f;
+    border: 1px solid var(--border-color);
     border-radius: 3rem;
     padding: 2.5rem;
-    background-color: #ffffff;
+    background-color: var(--bg-secondary);
     width: 100%;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -20,7 +20,6 @@
 
 .projeto-principal:hover {
     transform: translateY(-10px);
-    background-color: #f7f6f6;
 }
 
 .projeto-principal img {
@@ -29,7 +28,7 @@
     height: 344px;
     border-radius: 2rem;
     object-fit: cover;
-    border: 1px solid #3f3f3f4f;
+    border: 1px solid var(--border-color);
 }
 
 .projeto-principal-texto {
@@ -42,8 +41,8 @@
 
 .projeto-principal-texto span {
     font-size: 13px;
-    color: #ffffff;
-    background-color: #183636d1;
+    color: var(--text-light);
+    background-color: var(--bg-green-dark);
     font-weight: 600;
     padding: 8px 30px;
     border-radius: 3rem;
@@ -56,13 +55,13 @@
     font-weight: 800;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #183636;
+    color: var(--text-primary);
     font-family: "Montserrat", sans-serif;
 }
 
 .projeto-principal-texto p {
     font-size: 17px;
-    color: #434343;
+    color: var(--text-secondary);
     max-width: 400px;
     text-align: left;
     line-height: 1.6;
@@ -72,8 +71,8 @@
 .btn-blog-principal {
     padding: 12px 30px;
     background-color: transparent;
-    color: #3F5B5B;
-    border: 2px solid #3F5B5B;
+    color: var(--text-primary);
+    border: 2px solid var(--bg-green);
     border-radius: 3rem;
     font-size: 16px;
     cursor: pointer;
@@ -83,13 +82,13 @@
 }
 
 .btn-blog-principal:hover {
-    background-color: #3F5B5B;
-    color: #fff;
+    background-color: var(--bg-green);
+    color: var(--text-light);
 }
 
 .descContainer {
     font-size: 17px;
-    color: #434343;
+    color: var(--text-secondary);
     text-align: left;
     line-height: 1.6;
     font-family: "Montserrat", sans-serif;

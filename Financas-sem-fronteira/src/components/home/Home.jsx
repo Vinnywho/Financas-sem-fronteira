@@ -45,12 +45,12 @@ function Home() {
         </div>
         <div
           className={styles.janinaWrapper}
-          data-aos="fade-left"
+          data-aos="zoom-in"
           data-aos-delay="500"
         >
           <img className={styles.janina} src={janina} alt="Janina" />
 
-          <div className={`${styles.card} ${styles.cardPos1}`}>
+          <div className={`${styles.card} ${styles.cardPos1}`} data-aos="zoom-in" data-aos-delay="800">
             <div className={styles.flexContainer}>
               <div className={styles.textoBox}>
                 <p className={styles.frase}>
@@ -60,7 +60,7 @@ function Home() {
             </div>
           </div>
 
-          <div className={`${styles.card} ${styles.cardPos2}`}>
+          <div className={`${styles.card} ${styles.cardPos2}`} data-aos="zoom-in" data-aos-delay="900">
             <div className={styles.flexContainer}>
               <div className={styles.textoBox}>
                 <p className={styles.frase}>
@@ -70,7 +70,7 @@ function Home() {
             </div>
           </div>
 
-          <div className={`${styles.card} ${styles.cardPos3}`}>
+          <div className={`${styles.card} ${styles.cardPos3}`} data-aos="zoom-in" data-aos-delay="1000">
             <div className={styles.flexContainer}>
               <div className={styles.textoBox}>
                 <p className={styles.frase}>

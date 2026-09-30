@@ -1,100 +1,159 @@
-@import url("https://fonts.googleapis.com/css2?family=Anta&family=Bagel+Fat+One&family=Barrio&family=Bitcount:wght@100..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cherry+Bomb+One&family=Coral+Pixels&family=Handjet:wght,ELSH@100..900,2&family=Honk:MORF@15&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Rubik+Glitch&display=swap");
+*{
+  font-family: "Montserrat", sans-serif;
+}
 
-.loginContainer {
-  position: relative;
+.pageWrapper {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.loginContainer {
+  margin-top: 50px;
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--bg-green-gradient);
+  padding: 120px 20px 80px;
+  position: relative;
+}
+
+.loginContainer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(225, 196, 95, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--bg-secondary);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
-  background-color: #f8f7f4;
-  padding: 40px 20px;
-  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.cardHeader {
+  padding: 40px 40px 20px;
+  text-align: center;
 }
 
 .title {
   font-family: "Montserrat", sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 800;
-  color: #183636;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .loginForm {
+  padding: 0 40px 40px;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  width: 100%;
-  max-width: 400px;
-  background-color: #ffffff;
-  padding: 2.5rem;
-  border-radius: 1.5rem;
-  border: 1px solid #3f3f3f2a;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  box-sizing: border-box;
+  gap: 20px;
 }
 
-.emailInput,
-.passwordInput {
-  padding: 0.85rem 1rem;
-  border: 1px solid #3f3f3f4f;
-  border-radius: 0.75rem;
-  font-size: 16px;
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputLabel {
   font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inputField {
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
   width: 100%;
-  box-sizing: border-box;
-  background-color: #fbfbfa;
-  color: #183636;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: all 0.2s ease;
 }
 
-.emailInput:focus,
-.passwordInput:focus {
-  border-color: #3f5b5b;
-  box-shadow: 0 0 0 3px rgba(63, 91, 91, 0.1);
-  background-color: #ffffff;
+.inputField:focus {
+  border-color: var(--accent-gold);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 0 3px rgba(225, 196, 95, 0.15);
 }
 
-.emailInput::placeholder,
-.passwordInput::placeholder {
-  color: rgba(24, 54, 54, 0.5);
+.inputField::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 .loginButton {
-  padding: 0.85rem;
+  margin-top: 10px;
+  padding: 16px;
   border: none;
-  border-radius: 0.75rem;
-  background-color: #183636;
-  color: #fff;
+  border-radius: 12px;
+  background-color: var(--bg-navy);
+  color: #ffffff;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   cursor: pointer;
-  width: 100%;
-  transition: background-color 0.2s, transform 0.1s;
-  margin-top: 0.5rem;
+  transition: all 0.3s ease;
 }
 
-.loginButton:hover {
-  background-color: #3f5b5b;
+.loginButton:hover:not(:disabled) {
+  background-color: var(--accent-gold);
+  color: var(--bg-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(225, 196, 95, 0.3);
 }
 
-.loginButton:active {
-  transform: scale(0.98);
+.loginButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.adminNotice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 480px) {
-  .loginForm {
-    padding: 1.75rem;
+  .loginCard {
     border-radius: 1rem;
   }
   
-  .title {
-    font-size: 28px;
+  .cardHeader,
+  .loginForm {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  .cardHeader {
+    padding-top: 32px;
   }
 }
