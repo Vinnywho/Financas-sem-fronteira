@@ -15,6 +15,7 @@ import PostDetail from "../pages/post-detail/PostDetail.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
 import ConversaReconhecimento from "../pages/ConversaReconhecimento/ConversaReconhecimento.jsx";
 import WhatsAppButton from "../components/whatsapp-button/WhatsAppButton.jsx";
+import NotFound from "../pages/not-found/NotFound.jsx";
 
 function Rotas() {
   return (
@@ -41,6 +42,7 @@ function Rotas() {
             } 
           />
           <Route path="/blog/post/:id" element={<PostDetail />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router> 
     </div>
